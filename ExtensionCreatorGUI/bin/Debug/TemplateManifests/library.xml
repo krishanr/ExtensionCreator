@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension title="Joomla Library">
+  <parameters>
+    <!-- By putting the template loads at the top, the parameters they define
+		     can be overridden here.  -->
+    <loadTemplate from="joomla/library.xml" select="library/parameters/*" />
+    <library>
+      <!-- If name is not specified, it is auto-generated using the nameType parameter. -->
+      <label>Custom Library</label>
+      <name>mylibrary</name>
+      <!-- The description is optional and defaults to the name -->
+      <description>A custom library.</description>
+    </library>
+  </parameters>
+  <!-- Typical tasks for libraries. -->
+  <tasks>
+    <!-- Order matters, the tasks are run in the order seen here. -->
+    <task name="Main" />
+  </tasks>
+  <loadTemplate from="joomla/library.xml" select="library/taskDefinitions" />
+</extension>

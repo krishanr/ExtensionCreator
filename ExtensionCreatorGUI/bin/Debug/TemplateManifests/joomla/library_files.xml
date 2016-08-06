@@ -1,0 +1,51 @@
+<#@ template inherits="ETemplate" language="VB" #>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- These are the files used for Joomla 1.6 Libraries. -->
+<templateFiles>
+	<!-- If this archive already exists in the archiveDirectory it will be overwritten. -->
+	<ArchiveName><#= Value("Extension.name") #>-<#= Value("Extension.version") #>.zip</ArchiveName>
+	<fileDefinitions>
+		<file name="IndexHtmlFile" processFile="true" function="CreateIndexHtmlFile" >index.html</file>
+	</fileDefinitions>
+	<inheritableAttributes>
+		<addFile/>	
+		<readInNodes/>
+		<processFile/>
+	</inheritableAttributes>
+	<!-- Ordering of task file execution is determined in the parent file. -->
+	<!-- The Main files are all necessary, don't remove any of them. -->
+	<files for="Main">
+		<folder name="administrator"
+				exportAs="administrator">
+			<folder name="manifests">
+				<folder name="libraries">
+					<!-- Make sure the intall file is loaded first, so its parameters can be used. -->
+					<file template="library.xml" 
+						  archiveAs="" 
+						  install="true" ><#= Value("Extension.name") #>.xml</file>
+				</folder>
+			</folder>
+		</folder>
+		<folder name="libraries"
+				exportAs="libraries">
+			<folder name="<#= Value("Extension.name") #>"  
+					archiveAs="<#= Value("Extension.name") #>" 
+					readInNodes="true" 
+					addFile="IndexHtmlFile" 
+					listContentsTo="/extension/files" >
+			</folder>
+		</folder>
+		<folder name="media"
+			    exportAs="media">
+			<folder name="<#= Value("Extension.fullName") #>"
+					archiveAs="media"
+					readInNodes="true"
+					addFile="IndexHtmlFile" 
+					listContentsTo="/extension/media" >
+					<folder name="css" />
+					<folder name="images" />
+					<folder name="js" />
+			</folder>
+		</folder>
+	</files>
+</templateFiles>

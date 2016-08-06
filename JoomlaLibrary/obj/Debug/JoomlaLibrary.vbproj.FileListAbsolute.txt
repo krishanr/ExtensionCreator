@@ -20,3 +20,9 @@ C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\JoomlaLi
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\Mono.TextTemplating.dll
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\Mono.TextTemplating.xml
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\Mono.TextTemplating.pdb
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\Irony.dll
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\Irony.Samples.dll
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\Irony.Interpreter.dll
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\Irony.pdb
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\Irony.Samples.pdb
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\Irony.Interpreter.pdb

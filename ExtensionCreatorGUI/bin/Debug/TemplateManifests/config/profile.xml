@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profile>
+	<author>George Smith</author>
+	<authorEmail>name@example.com</authorEmail>
+	<authorUrl>https://www.example.com/</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>GNU/GPL v2</license>
+</profile>

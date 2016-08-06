@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML Studio 2012 Developer Edition (Trial) 10.0.2.3955 
+	(http://www.liquid-technologies.com) -->
+<extension
+	xmlns="http://www.templatemaker.org/2012/schema"
+	xmlns:tm="http://www.templatemaker.org/2012/schema"
+	xmlns:j="http://www.templatemaker.org/2012/joomla/schema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.templatemaker.org/2012/joomla/schema component.xsd"
+	title="string">
+	<parameters
+		xsi:type="j:componentParameters">
+		<j:component>
+			<j:label>string</j:label>
+			<j:description>string</j:description>
+			<j:defaultView>string</j:defaultView>
+			<j:package>string</j:package>
+			<j:profile>
+				<j:author>string</j:author>
+				<j:authorEmail>string</j:authorEmail>
+				<j:authorUrl>string</j:authorUrl>
+				<j:copyright>string</j:copyright>
+				<j:license>string</j:license>
+			</j:profile>
+      <j:database>
+				<j:databaseName>string</j:databaseName>
+				<j:server>string</j:server>
+				<j:userid>string</j:userid>
+				<j:password>string</j:password>
+				<j:tablePrefix>string</j:tablePrefix>
+		</j:database>
+		</j:component>
+	</parameters>
+	<tasks>
+		<task
+			xsi:type="j:DatabaseToAdminConnector">
+			<j:parameters>
+				<j:table>string</j:table>
+				<j:nameObject>string</j:nameObject>
+				<j:nameObjectList>string</j:nameObjectList>
+				<j:tableAlias>a</j:tableAlias>
+				<j:canEdit>true</j:canEdit>
+				<j:canCreate>1</j:canCreate>
+			</j:parameters>
+		</task>
+		<task
+			xsi:type="j:SiteForm">
+			<j:parameters>
+				<j:table>string</j:table>
+				<j:nameObject>string</j:nameObject>
+				<j:nameObjectList>string</j:nameObjectList>
+				<j:tableAlias>a</j:tableAlias>
+				<j:canEdit>true</j:canEdit>
+				<j:canCreate>1</j:canCreate>
+			</j:parameters>
+		</task>
+	</tasks>
+</extension>

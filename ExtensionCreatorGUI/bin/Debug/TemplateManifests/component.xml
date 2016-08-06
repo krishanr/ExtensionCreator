@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension title="Joomla Component">
+  <parameters>
+    <loadTemplate from="joomla/component_j3.x.xml" select="component/parameters/*" />
+    <component>
+      <!-- If name is not specified, it is auto-generated using the nameType parameter. -->
+      <label>Listing</label>
+      <!-- The description is optional and defaults to the name (not yet implemented)-->
+      <description>Lists articles from a category.</description>
+      <!-- Currently the default view for the back end. -->
+      <defaultView>listing</defaultView>
+      <joomlaVersion>3.2.0</joomlaVersion>
+    </component>
+  </parameters>
+  <tasks>
+    <!-- Order matters, the tasks are run in the order seen here. -->
+    <!-- Language files need to go first, so the other files can add to them. -->
+    <task name="Language">
+      <parameters>
+        <ran>true</ran>
+      </parameters>
+    </task>
+    <task name="Main">
+      <parameters>
+        <ran>true</ran>
+      </parameters>
+    </task>
+    <task name="MVC">
+      <parameters>
+        <nameObject>listing</nameObject>
+        <ran>true</ran>
+      </parameters>
+    </task>
+  </tasks>
+  <loadTemplate from="joomla/component_j3.x.xml" select="component/taskDefinitions" />
+</extension>

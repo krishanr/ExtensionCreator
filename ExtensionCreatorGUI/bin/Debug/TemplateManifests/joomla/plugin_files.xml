@@ -1,0 +1,67 @@
+<#@ template inherits="ETemplate" language="VB" #>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- These are the files used for Joomla 1.6 Plugins. -->
+<!-- When creating the output directory, if any output file already exists
+     it will be used as the template file. -->
+<templateFiles>
+	<!-- If this archive already exists in the archiveDirectory it will be overwritten. -->
+	<ArchiveName>plg_<#= StrConv(Value("Extension.group"), VbStrConv.Lowercase) #>_<#= StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>-<#= Value("Extension.version") #>.zip</ArchiveName>
+	<fileDefinitions>
+		<file name="IndexHtmlFile" processFile="true" function="CreateIndexHtmlFile" >index.html</file>
+	</fileDefinitions>
+	<inheritableAttributes>
+		<langFile/>
+		<addFile/>	
+		<readInNodes/>
+		<processFile/>
+		<formFile />
+	</inheritableAttributes>
+	<!-- Ordering of task file execution is determined in the parent file. -->
+	<!-- Language files need to go first, so the other files can add to them. -->
+	<files for="Language">
+		<folder name="administrator" exportAs="administrator">
+			<folder name="language">			
+				<folder archiveAs="language" name="<#= Value("Task.lang") #>">
+					<file type="admin" template="langFile.ini" ><#= Value("Task.lang") #>.plg_<#= Value("Extension.group") #>_<#= Value("Extension.name") #>.ini</file>
+					<file type="admin.sys" template="langFile.ini" ><#= Value("Task.lang") #>.plg_<#= Value("Extension.group") #>_<#= Value("Extension.name") #>.sys.ini</file>
+				</folder>
+			</folder>
+		</folder>
+	</files>
+	<files for="Main">
+		<folder name="plugins" exportAs="plugins">
+			<folder name="<#= Value("Extension.group") #>">
+				<folder name="<#= Value("Extension.name") #>" 
+						readInNodes="true" 
+						archiveAs="<#= Value("Extension.name") #>" 
+						langFile="admin" 
+						addFile="IndexHtmlFile" 
+						listContentsTo="/extension/files"
+						formFile="install">
+					<!-- Make sure the intall file is loaded first, so its parameters can be used. -->
+					<file template="plugin.xml"
+						  archiveAs="" 
+						  langFile="admin.sys" 
+						  install="true" 
+						  openJform="true"
+						  formTitle="Plugin Params Form"
+						  hasForm="install"
+						  formFieldset="basic"><#= Value("Extension.name") #>.xml</file>
+					<file template="plugin.php" ><#= Value("Extension.name") #>.php</file>
+				</folder>
+			</folder>
+		</folder>
+		<folder name="media"
+			    exportAs="media">
+			<folder name="<#= Value("Extension.fullName") #>"
+					archiveAs="media"
+					readInNodes="true"
+					addFile="IndexHtmlFile" 
+					listContentsTo="/extension/media" >
+					<folder name="css" />
+					<folder name="images" />
+					<folder name="js" />
+			</folder>
+		</folder>
+	</files>
+</templateFiles>

@@ -1,0 +1,328 @@
+<#@ template inherits="ETemplate" language="VB" #>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Last tested with Joomla versions ... -->
+<!-- When creating the output directory, if any output file already exists
+     it will be used as the template file. -->
+<templateFiles>
+	<!-- If this archive already exists in the archiveDirectory it will be overwritten. -->
+	<ArchiveName>com_<#= StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>-<#= Value("Extension.version") #>.zip</ArchiveName>
+	<fileDefinitions>
+		<file name="IndexHtmlFile" 
+			  processFile="true" 
+			  function="CreateIndexHtmlFile" >index.html</file>
+	</fileDefinitions>
+	<inheritableAttributes>
+		<langFile/>
+		<addFile/>	
+		<readInNodes/>
+		<processFile/>
+		<formFile />
+	</inheritableAttributes>
+	<!-- Ordering of task file execution is determined in the parent file. -->
+	<!-- Language files need to go first, so the other files can add to them. -->
+	<!-- Files with type metadata get their lang keys stored in the .sys lang file.  -->
+	<!-- All files for task Language should be a language file with a valid type. -->
+	<!-- listContentsTo attribute should only be added once to a directory. -->
+	<files for="Language">
+		<folder name="language" 
+			    exportAs="language"
+			    archiveAs="site">			
+			<folder archiveAs="site\language" name="<#= Value("Task.lang") #>">
+				<file type="site" template="langFile.ini" ><#= Value("Task.lang") #>.com_<#= StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>.ini</file>
+			</folder>
+		</folder>
+		<folder name="administrator"
+			    exportAs="administrator">
+			<folder archiveAs="admin" name="language">			
+				<folder archiveAs="admin\language" name="<#= Value("Task.lang") #>">
+					<file type="admin" template="langFile.ini" ><#= Value("Task.lang") #>.com_<#= StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>.ini</file>
+					<file type="admin.sys" template="langFile.ini" ><#= Value("Task.lang") #>.com_<#= StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>.sys.ini</file>
+				</folder>
+			</folder>
+		</folder>
+	</files>
+	<files for="Main">
+		<!-- The Main files are all necessary, don't remove any of them. -->
+		<folder name="components" 
+			    langFile="site"
+			    exportAs="components">
+			<folder name="<#= "com_" & StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>" 
+					readInNodes="true" 
+					addFile="IndexHtmlFile" 
+					archiveAs="site" 
+					listContentsTo="/extension/files[@folder='site']" >			
+			</folder>	
+		</folder>
+		<folder name="administrator"
+			    langFile="admin" 
+		 	    exportAs="administrator">
+			<folder name="components">
+				<folder name="<#= "com_" & StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>" 
+					    readInNodes="true" 
+					    addFile="IndexHtmlFile"
+					    archiveAs="admin" 
+					    listContentsTo="/extension/administration/files[@folder='admin']"
+					    formFile="config">	
+					<!-- Make sure the intall file is loaded first, so its parameters can be used. -->
+					<!-- For the install file, only need the install attribute to be there (value doesn't matter). -->
+					<file template="install.xml" 
+						  archiveAs="" 
+						  langFile="admin.sys" 
+						  install="true"><#= StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>.xml</file>	
+					<!-- Make sure this file appears before files that may add parameters to it. -->
+					<file template="beConfig.xml" 
+						  langFile="admin"
+						  openJform="true"
+						  formTitle="Configurations form"
+						  formSaveMethod="4"
+						  hasForm="config"
+						  formFieldset="main" >config.xml</file>
+					<file template="beInstallScript.php"
+						  archiveAs="" 
+						  langFile="admin.sys" 
+						  listContentsTo="false">script.php</file>
+					<folder name="assets" />
+					<file template="beAccess.xml"
+						  langFile="admin.sys" >access.xml</file>	
+				</folder>
+			</folder>
+		</folder>
+		<folder name="media"
+			    exportAs="media">
+			<folder name="<#= Value("Extension.fullName") #>"
+					archiveAs="media"
+					readInNodes="true"
+					addFile="IndexHtmlFile" 
+					listContentsTo="/extension/media" >
+					<folder name="css" />
+					<folder name="images" />
+					<folder name="js" />
+			</folder>
+		</folder>
+	</files>
+	<files for="MVC">
+		<!-- Currently only setup for frontend use. -->
+		<folder name="components" 
+			    langFile="site"
+			    exportAs="components">
+			<folder name="<#= Value("Extension.fullName") #>" 
+					addFile="IndexHtmlFile" 
+					archiveAs="site"  >
+				<file template="feEntryPoint.php"><#= StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>.php</file>
+				<file template="feControllerDefault.php">controller.php</file>
+				<folder name="models">		
+					<file template="feModel.php" ><#= Value("Task.nameObject") #>.php</file>
+				</folder>
+				<folder name="views">
+					<folder name="<#= Value("Task.nameObject") #>">		
+						<folder name="tmpl">		
+							<file template="feTmpl.php" >default.php</file>		
+							<file langFile="admin.sys" template="feLayoutMetadata.xml">default.xml</file>
+						</folder>
+						<file template="feView.php" >view.html.php</file>	
+					</folder>
+				</folder>				
+			</folder>	
+		</folder>
+	</files>
+	<files for="Helpers">
+		<folder name="administrator"
+				langFile="admin"
+			    exportAs="administrator"
+				formFile="config">
+			<folder name="components">
+				<folder addFile="IndexHtmlFile" archiveAs="admin" name="<#= "com_" & StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>">
+					<folder name="helpers">
+						<file template="beHelper.php" ><#= StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>.php</file>
+					</folder>	
+				</folder>
+			</folder>
+		</folder>	
+	</files>
+	<files for="Field">	
+		<folder name="administrator"
+			    langFile="admin" 
+			    exportAs="administrator"
+				formFile="config">
+			<folder name="components">
+				<folder name="<#= "com_" & StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>"
+						addFile="IndexHtmlFile" 
+						archiveAs="admin">
+					<folder name="models">
+						<folder name="fields">
+							<file template="FormField.php" ><#= StrConv(Value("Task.name"), VbStrConv.Lowercase) #>.php</file>
+						</folder>					
+					</folder>
+				</folder>
+			</folder>
+		</folder>	
+	</files>
+	<files for="SiteForm">
+		<folder name="administrator"
+				exportAs="administrator"
+			    langFile="admin"
+				formFile="config">
+			<folder name="components">
+				<folder name="<#= "com_" & StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>"
+					    addFile="IndexHtmlFile" 
+					    archiveAs="admin" >
+					<folder name="tables">
+						<file template="beTable.php" ><#= Value("Task.nameObject") #>.php</file>
+					</folder>				
+				</folder>
+			</folder>
+		</folder>
+		<folder name="components"
+				langFile="site"
+			    exportAs="components"
+				formFile="config">
+			<folder addFile="IndexHtmlFile" archiveAs="site" name="<#= "com_" & StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>">
+				<file template="feControllerDefault.php" >controller.php</file>
+				<file template="feEntryPoint.php" ><#= StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>.php</file>
+				<folder name="controllers">		
+					<file template="feFormController.php" ><#= Value("Task.nameObject") #>.php</file>
+				</folder>
+				<folder name="models">		
+					<folder name="forms">		
+						<file template="jform.xml"
+						      openJform="true"
+						      formFillMethod="EditForm"
+						      formTitle="Edit form for task Site form" ><#= Value("Task.nameObject") #>.xml</file>	
+					</folder>
+					<file template="feFormModel.php" ><#= Value("Task.nameObject") #>.php</file>
+				</folder>
+				<folder name="views">		
+					<folder name="<#= Value("Task.nameObject") #>">		
+						<folder name="tmpl">		
+							<file template="FeFormTmpl.php" >fill.php</file>		
+							<file template="FeFormTmplSuccess.php">success.php</file>
+							<file langFile="admin.sys" template="feFormLayoutMetadata.xml">fill.xml</file>
+						</folder>
+						<file template="feFormView.php" >view.html.php</file>	
+					</folder>
+				</folder>							
+			</folder>
+		</folder>
+		<folder name="media"
+			    exportAs="media">
+			<folder name="<#= Value("Extension.fullName") #>"
+					archiveAs="media"
+					addFile="IndexHtmlFile">
+					<folder name="css" />
+					<folder name="images" />
+					<folder name="js" >
+						<!-- TODO: check this comparison. -->
+						<# If String.Compare(Value("Extension.joomlaVersion"), "2.0") < 0 Then  #>
+						<file template="feFormJS.js"><#= Value("Task.nameObject") #>.js</file>
+						<# End If #>
+					</folder>
+			</folder>
+		</folder>
+	</files>
+	<files for="BasicBackend">
+		<folder name="administrator"
+				langFile="admin"
+				exportAs="administrator"
+				formFile="config">
+			<folder name="components">
+				<folder name="<#= "com_" & StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>"
+					    addFile="IndexHtmlFile" 
+					    archiveAs="admin">
+					<file template="beControllerDefault.php" >controller.php</file>
+					<file template="beEntryPoint.php" ><#= StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>.php</file>
+					<folder name="controllers">		
+						<# If Value("Task.canEdit") = "true" Or Value("Task.canCreate") = "true" Then  #>
+						<file template="beController.php" ><#= Value("Task.nameObject") #>.php</file>
+						<# End If #>
+						<file template="beControllerList.php" ><#= Value("Task.nameObjectList") #>.php</file>		
+					</folder>
+					<folder name="models">		
+						<folder name="forms">		
+							<# If Value("Task.canEdit") = "true" Or Value("Task.canCreate") = "true" Then  #>
+							<file  template="jform.xml"
+						           openJform="true"
+						     	   formFillMethod="EditForm"
+						      	   formTitle="Edit form for task BasicBackend and table <#= Value("Task.table") #>" ><#= Value("Task.nameObject") #>.xml</file>
+							<# End If #>
+							<file template="FilterForm.xml">filter_<#= Value("Task.nameObjectList") #>.xml</file>
+						</folder>
+						<file template="beModel.php" ><#= Value("Task.nameObject") #>.php</file>
+						<file template="beModelList.php" ><#= Value("Task.nameObjectList") #>.php</file>	
+					</folder>
+					<folder name="views">		
+						<# If Value("Task.canEdit") = "true" Or Value("Task.canCreate") = "true" Then  #>
+						<folder name="<#= Value("Task.nameObject") #>">		
+							<folder name="tmpl">		
+								<file template="beTmpl.php" >edit.php</file>		
+							</folder>
+							<file template="beView.php" >view.html.php</file>		
+						</folder>
+						<# End If #>
+						<folder name="<#= Value("Task.nameObjectList") #>">	
+							<folder name="tmpl">		
+								<file template="beTmplList.php" >default.php</file>		
+							</folder>	
+							<file template="beViewList.php" >view.html.php</file>		
+						</folder>
+					</folder>
+					<folder name="tables">
+						<file template="beTable.php"><#= Value("Task.nameObject") #>.php</file>
+					</folder>			
+				</folder>
+			</folder>
+		</folder>
+	</files>
+	<files for="DatabaseToAdminConnector">
+		<folder name="administrator"
+				langFile="admin"
+				exportAs="administrator"
+				formFile="config">
+			<folder name="components">
+				<folder name="<#= "com_" & StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>"
+					    addFile="IndexHtmlFile" 
+					    archiveAs="admin">
+					<file template="beControllerDefault.php" >controller.php</file>
+					<file template="beEntryPoint.php" ><#= StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>.php</file>
+					<folder name="controllers">		
+						<# If Value("Task.canEdit") = "true" Or Value("Task.canCreate") = "true" Then  #>
+						<file template="beController.php" ><#= Value("Task.nameObject") #>.php</file>
+						<# End If #>
+						<file template="beControllerList.php" ><#= Value("Task.nameObjectList") #>.php</file>		
+					</folder>
+					<folder name="models">		
+						<folder name="forms">		
+							<# If Value("Task.canEdit") = "true" Or Value("Task.canCreate") = "true" Then  #>
+							<file  template="jform.xml"
+						           openJform="true"
+						     	   formFillMethod="EditForm"
+						      	   formTitle="Edit form for task DatabaseToAdminConnector and table <#= Value("Task.table") #>" ><#= Value("Task.nameObject") #>.xml</file>
+							<# End If #>	
+							<file  template="jform.xml"
+						           openJform="true"
+						           formFillMethod="ListForm"
+						      	   formTitle="List form for task DatabaseToAdminConnector and table <#= Value("Task.table") #>" ><#= Value("Task.nameObjectList") #>table.xml</file>
+						</folder>
+						<file template="beModel.php" ><#= Value("Task.nameObject") #>.php</file>
+						<file template="beModelListPlus.php" ><#= Value("Task.nameObjectList") #>.php</file>	
+					</folder>
+					<folder name="views">		
+						<# If Value("Task.canEdit") = "true" Or Value("Task.canCreate") = "true" Then  #>
+						<folder name="<#= Value("Task.nameObject") #>">		
+							<folder name="tmpl">		
+								<file template="beTmpl.php" >edit.php</file>		
+							</folder>
+							<file template="beView.php" >view.html.php</file>		
+						</folder>
+						<# End If #>
+						<folder name="<#= Value("Task.nameObjectList") #>">		
+							<file template="beDataGridView.php" >view.html.php</file>		
+						</folder>
+					</folder>
+					<folder name="tables">
+						<file template="beTable.php"><#= Value("Task.nameObject") #>.php</file>
+					</folder>			
+				</folder>
+			</folder>
+		</folder>
+	</files>
+</templateFiles>

@@ -251,8 +251,7 @@ Public Class JComponent
         Dim ActiveTask As Microsoft.VisualBasic.Collection = GetActiveTaskCollection()
         Try
             Dim myJComponentData As New JComponentData(ActiveTask.Item("TaskParameters").Item("table"), ExtensionParameters.MyItem("tablePrefix"), _
-                                         ExtensionParameters.MyItem("server"), ExtensionParameters.MyItem("databaseName"), _
-                                         ExtensionParameters.MyItem("userid"), ExtensionParameters.MyItem("password"))
+                                         ExtensionParameters.MyItem("mySqlFile"))
             ActiveTask.Add(myJComponentData, "JDataTable")
             Dim myPrimaryKey As String = myJComponentData.getPrimaryKey()
             Dim myTaskParameters As Dictionary(Of String, String) = ActiveTask.Item("TaskParameters")

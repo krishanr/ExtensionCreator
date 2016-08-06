@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension title="Joomla Plugin">
+  <parameters>
+    <plugin>
+      <!-- If name is not specified, it is auto-generated using the nameType parameter. -->
+      <label>My Question</label>
+      <group>content</group>
+      <!-- The description is optional and defaults to the name -->
+      <description></description>
+    </plugin>
+    <!-- By putting the template loads at the end, they can override
+		     the parameters defined above.  -->
+    <loadTemplate from="joomla/plugin.xml" select="plugin/parameters/*" />
+  </parameters>
+  <!-- Typical tasks for plugins. -->
+  <tasks>
+    <!-- Order matters, the tasks are run in the order seen here. -->
+    <!-- Language files need to go first, so the other files can add to them. -->
+    <task name="Language">
+      <parameters />
+    </task>
+    <task name="Main">
+      <parameters />
+    </task>
+  </tasks>
+  <loadTemplate from="joomla/plugin.xml" select="plugin/taskDefinitions" />
+</extension>

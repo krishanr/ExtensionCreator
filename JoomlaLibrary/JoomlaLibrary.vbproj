@@ -43,13 +43,18 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Irony">
+      <HintPath>..\..\Irony_2013_12_12\Irony.Samples\bin\Debug\Irony.dll</HintPath>
+    </Reference>
+    <Reference Include="Irony.Samples">
+      <HintPath>..\..\Irony_2013_12_12\Irony.Samples\bin\Debug\Irony.Samples.dll</HintPath>
+    </Reference>
     <Reference Include="JForm">
       <HintPath>..\..\..\..\Visual Studio 2010\Projects\another1\JForm\bin\Release\JForm.exe</HintPath>
     </Reference>
     <Reference Include="JoomlaGUI">
       <HintPath>..\..\..\..\Visual Studio 2010\Projects\TemplateMaker\JoomlaGUI\bin\Release\JoomlaGUI.exe</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />

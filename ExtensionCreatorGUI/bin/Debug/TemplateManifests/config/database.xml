@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databases>
+	<database>
+		<databaseName>extcreator</databaseName>
+		<server>db4free.net</server>
+		<userid>ajoomladeveloper</userid>
+		<password>vmGmBZJLF42c</password>
+		<tablePrefix />
+	</database>
+</databases>
