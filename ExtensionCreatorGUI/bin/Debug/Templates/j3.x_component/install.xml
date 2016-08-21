@@ -1,6 +1,14 @@
 <#@ template inherits="ETemplate" language="VB" #>
 <#@ import namespace="System.Linq" #>
 <# Dim JExt as JExtension = CType(Ext, JExtension) #>
+<# 	        'Count the number of BasicBackend and SiteForm tasks'
+			Dim BackCn = Aggregate Task In JExt.TaskDictionary
+						  Where Task.Value.item("TaskName") Like "BasicBackend"
+						  Into Count()
+			Dim SiteCn = Aggregate Task In JExt.TaskDictionary
+						 Where Task.Value.item("TaskName") Like "SiteForm"
+						 Into Count()
+#>
 <extension type="component" version="<#= Value("Extension.joomlaVersion") #>" method="<#= Value("Extension.intallMethod") #>">
     <name><#= JExt.GenText("com_" & Value("Extension.name"), Value("Extension.label"), JExt.LangFiles.Item("admin.sys")) #></name>
     <!-- The following elements are optional and free of formatting constraints -->
@@ -15,6 +23,13 @@
     <!-- The description is optional and defaults to the name -->
     <description><#= Value("Extension.description") #></description>
 
+<#  If (BackCn > 0 OrElse SiteCn > 0) AndAlso KeyExists("Extension.mySqlFile") #>
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+<#	End If #>
     <files folder="site">
     </files>
 	<!-- Media files -->
@@ -26,12 +41,7 @@
 	<!-- Runs on install/uninstall/update; New in 1.6 -->
 	<scriptfile>script.php</scriptfile>
     <administration>
-<# 	        'Check if any backend code is added before creating a menu.'
-			Dim BackCn = Aggregate Task In JExt.TaskDictionary
-						  Where Task.Value.item("TaskName") Like "BasicBackend"
-						  Into Count()
-		 	If BackCn > 0
-		#>
+<# 	        If BackCn > 0 	#>
 		<menu><#= JExt.GenText("com_" & Value("Extension.name"), Value("Extension.label"), JExt.LangFiles.Item("admin.sys")) #></menu>
 <#			End If #>
 <# 	        'Check if Helpers task was run.'

@@ -119,7 +119,6 @@ Public Class JComponentData
                                         End If
                                         colType = colType & ")"
                                         'Set CHARACTER_MAXIMUM_LENGTH to length if specified
-                                        'TODO: is this meaningful when dataType is decimal?
                                         rowVals(3) = lengthList.ChildNodes(0).Token.Value
                                     Else
                                         'Set character max length from http://dev.mysql.com/doc/refman/5.7/en/string-type-overview.html
@@ -168,8 +167,7 @@ Public Class JComponentData
         Next
 
         'Set primary key
-        'TODO: what to do with multiple primary key errors?
-        'TODO: update_sites_extensions from joomla1.6.sql has a primary key based on two columns..
+        'TODO: what to do with multiple primary key errors? update_sites_extensions from joomla1.6.sql has a primary key based on two columns..
         If priKeyCol IsNot Nothing Then
             For Each row In Table.Rows
                 If row("COLUMN_NAME") = priKeyCol Then

@@ -606,7 +606,12 @@ Public MustInherit Class Extension
         ElseIf templateFileLoc <> "" Then
             'Child class genereated the template file location
         ElseIf FileNode.Attribute("template") IsNot Nothing Then
-            templateFileLoc = TemplateFolder & "\" & FileNode.Attribute("template").Value
+            If Path.IsPathRooted(FileNode.Attribute("template").Value) Then
+                'The template file was supplied from a non-standard location.
+                templateFileLoc = FileNode.Attribute("template").Value
+            Else
+                templateFileLoc = TemplateFolder & "\" & FileNode.Attribute("template").Value
+            End If
         ElseIf FileNode.Attribute("function") IsNot Nothing Then
             Try
                 Dim CallException

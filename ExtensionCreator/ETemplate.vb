@@ -13,7 +13,17 @@ Public MustInherit Class ETemplate
         End If
     End Sub
 
-    Public Function Value(ByVal param As String)
+    Public Function KeyExists(ByVal param As String) As Boolean
+        Dim results As String() = Split(param, ".")
+        'TODO: handle exception here. Give better error message when parameter isn't found.
+        If results.Length = 1 Then
+            Return CType(Ext.ReplacementDictionaries("Extension"), MyDictionary).ContainsKey(param)
+        Else
+            Return CType(Ext.ReplacementDictionaries(results(0)), MyDictionary).ContainsKey(results(1))
+        End If
+    End Function
+
+    Public Function Value(ByVal param As String) As String
         Dim results As String() = Split(param, ".")
         'TODO: handle exception here. Give better error message when parameter isn't found.
         If results.Length = 1 Then
