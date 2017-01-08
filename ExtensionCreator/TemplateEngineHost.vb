@@ -45,7 +45,7 @@ Public Class TemplateEngineHost
     'The engine can change this value based on the optional output directive
     'if the user specifies it in the text template.
     '---------------------------------------------------------------------
-    Private fileEncodingValue As Encoding = Encoding.UTF8
+    Private fileEncodingValue As Encoding = New System.Text.UTF8Encoding(False)
     Public ReadOnly Property fileEncoding() As Encoding
         Get
             Return fileEncodingValue

@@ -3,9 +3,9 @@ Imports System.Xml.XPath
 Imports System.Collections.Specialized
 Imports System.IO
 Imports System.IO.Path
+'Imports System.IO.Compression
 Imports Ionic.Zip
 
-'TODO: can use System.IO.Compression.ZipFile for .Net 4.5
 Public Class DirectoryManager
 
     Public TemplateFolder As String
@@ -248,25 +248,19 @@ Public Class DirectoryManager
         Next
 
         If Not Directory.Exists(ArchiveDirectory) Then
-            'TODO: File double check
             Directory.CreateDirectory(ArchiveDirectory)
         Else
-            'TODO: File double check
             If DeletePrev AndAlso File.Exists(ArchiveDirectory & "\" & ArchiveName) Then
                 My.Computer.FileSystem.DeleteFile(ArchiveDirectory & "\" & ArchiveName, FileIO.UIOption.OnlyErrorDialogs, FileIO.RecycleOption.DeletePermanently)
             End If
         End If
 
         Try
-            'TODO: Need to incporate archiver and exporter arguments. Have to test this.
             Using zip As ZipFile = New ZipFile()
                 zip.AddDirectory(TempFolder)
                 zip.Save(ArchiveDirectory & "\" & ArchiveName)
             End Using
-            'OBSOLETE: old code using local archiver
-            'Dim sw As New StringWriter
-            'sw.Write(ArchiverArguments, ArchiveDirectory & "\" & ArchiveName, TempFolder)
-            'Shell(Archiver & " " & sw.ToString(), , True, 10000)
+            'ZipFile.CreateFromDirectory(TempFolder, ArchiveDirectory & "\" & ArchiveName, CompressionLevel.Optimal, False)
         Catch ex As Exception
             MsgBox("Error trying to archive output: " & ex.Message)
         End Try

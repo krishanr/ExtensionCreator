@@ -13,7 +13,7 @@
 		<nameType>plain</nameType>
 		<files>		
 			<!-- Root directory for template files. -->
-			<TemplateFolder relUri="true">..\..\Templates\j16_plugin</TemplateFolder>
+			<TemplateFolder relUri="true">..\..\Templates\j3.x_plugin</TemplateFolder>
 			<templateFiles relUri="true">plugin_files.xml</templateFiles>
 		</files>
 	</parameters>

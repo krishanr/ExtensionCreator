@@ -14,9 +14,9 @@
 		<files>
 			<!-- Root directory for output files. -->
 			<!-- C:\Users\Home\Documents\Job\workspace\Joomla 1.6 Work\test -->
-			<!-- C:\xampp\htdocs\askthedoctor\joomla17 -->
+			<!-- relUri="true">..\..\Output</OutputFolder -->
 			<!-- C:\Users\Home\Documents\Job\workspace\Infinity Health Centre -->
-			<OutputFolder relUri="true">..\..\Output</OutputFolder>
+			<OutputFolder>C:\xampp\apps\joomla\htdocs</OutputFolder>
 			<ArchiveDirectory relUri="true">..\..\Archives</ArchiveDirectory>
 			<exportFileName>export.zip</exportFileName>
 		</files>

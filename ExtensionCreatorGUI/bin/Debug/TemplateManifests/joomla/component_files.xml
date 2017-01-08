@@ -168,10 +168,10 @@
 					    archiveAs="admin" >
 					<folder name="tables">
 						<file template="beTable.php" ><#= Value("Task.nameObject") #>.php</file>
+					</folder>
+					<folder name="sql">
+						<file template="<#= Value("Extension.mySqlFile") #>">install.mysql.utf8.sql</file>
 					</folder>				
-				</folder>
-				<folder name="sql">
-					<file template="<#= Value("Extension.mySqlFile") #>">install.mysql.utf8.sql</file>
 				</folder>
 			</folder>
 		</folder>

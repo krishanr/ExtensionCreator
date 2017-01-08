@@ -1,7 +1,8 @@
 <#@ template inherits="ETemplate" language="VB" #>
+<# Dim JExt as JExtension = CType(Ext, JExtension) #>
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="<#= Value("Extension.joomlaVersion") #>" type="plugin" group="<#= Value("Extension.group") #>">
-	<name><#= Args(0).GenText("plg_" & Value("Extension.group") & "_" &  Value("Extension.name"), StrConv(Value("Extension.group"), VbStrConv.ProperCase) & " - " & Value("Extension.label"), Args(0).LangFiles.Item("admin.sys")) #></name>
+	<name><#= JExt.GenText("plg_" & Value("Extension.group") & "_" &  Value("Extension.name"), StrConv(Value("Extension.group"), VbStrConv.ProperCase) & " - " & Value("Extension.label"), JExt.LangFiles.Item("admin.sys")) #></name>
 	<author><#= Value("Extension.author") #></author>
 	<creationDate><#= Today.Date #></creationDate>
     <copyright><#= Value("Extension.copyright") #></copyright>

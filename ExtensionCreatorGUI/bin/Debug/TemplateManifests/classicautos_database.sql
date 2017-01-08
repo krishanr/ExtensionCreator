@@ -1,7 +1,7 @@
-DROP TABLE IF EXISTS `customers`;
+DROP TABLE IF EXISTS `#__customers`;
 
-CREATE TABLE `customers` (
-  `customerNumber` int(11) NOT NULL,
+CREATE TABLE `#__customers` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `customerName` varchar(50) NOT NULL,
   `contactLastName` varchar(50) NOT NULL,
   `contactFirstName` varchar(50) NOT NULL,
@@ -14,7 +14,6 @@ CREATE TABLE `customers` (
   `country` varchar(50) NOT NULL,
   `salesRepEmployeeNumber` int(11) DEFAULT NULL,
   `creditLimit` decimal(10,2) DEFAULT NULL,
-  PRIMARY KEY (`customerNumber`),
-  KEY `salesRepEmployeeNumber` (`salesRepEmployeeNumber`),
-  CONSTRAINT `customers_ibfk_1` FOREIGN KEY (`salesRepEmployeeNumber`) REFERENCES `employees` (`employeeNumber`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`),
+  KEY `salesRepEmployeeNumber` (`salesRepEmployeeNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

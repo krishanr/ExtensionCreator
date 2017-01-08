@@ -11,7 +11,7 @@
       <defaultView>customers</defaultView>
       <joomlaVersion>3.2.0</joomlaVersion>
       <mySqlFile relUri="true">classicautos_database.sql</mySqlFile>
-      <tablePrefix />
+      <tablePrefix>#__</tablePrefix>
     </component>
   </parameters>
   <tasks>
@@ -47,13 +47,27 @@
         <ran>true</ran>
       </parameters>
     </task>
-    <!--     <task name="SiteForm">
+    <task name="SiteForm">
       <parameters>
         <table>customers</table>
         <nameObject>customer</nameObject>
         <message>Displays a form that allows people to add customers.</message>
+        <ran>true</ran>
       </parameters>
-    </task> -->
+    </task>
+    <task name="Field">
+      <parameters>
+        <parent>list</parent>
+        <name>city</name>
+        <dynamicList>
+          <table>customers</table>
+          <value>city</value>
+          <text>city</text>
+          <published>true</published>
+        </dynamicList>
+        <ran>true</ran>
+      </parameters>
+    </task>
   </tasks>
   <loadTemplate from="joomla/component_j3.x.xml" select="component/taskDefinitions" />
 </extension>
