@@ -1,0 +1,39 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ExtensionCreator
+</name>
+</assembly>
+<members>
+<member name="T:ExtensionCreator.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:ExtensionCreator.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:ExtensionCreator.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:ExtensionCreator.DirectoryManager.GetXpath(System.String,System.String,System.Boolean)">
+ <summary>
+ If its a folder the path should be of the form \Directory1\Directory2\...\Directoryn,
+ if its a file the path should be of the form \Directory1\Directory2\...\Directoryn\FileName.
+ </summary>
+ <param name="TaskId">The id of the task to retrieve the file or folder from.</param>
+ <param name="FilePath">Uses the active file path if the file path is not specified.</param>
+ <returns></returns>
+ <remarks>
+ </remarks>
+ TODO: optional. should use the FilePathAttribute to build the xpath query.
+ TODO: not rigorously tested.
+</member>
+</members>
+</doc>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<templateFiles>
+  <files for="Language" id="Language1">
+    <folder name="language" exportAs="language" FilePath="\language">
+      <folder archiveAs="language" name="en-GB" FilePath="\language\en-GB" ArchivePath="\language">
+        <file type="item" template="langFile.ini" FilePath="\language\en-GB" ArchivePath="\language">en-GB.mod_my_showcase.ini</file>
+        <file type="item.sys" template="langFile.ini" FilePath="\language\en-GB" ArchivePath="\language">en-GB.mod_my_showcase.sys.ini</file>
+      </folder>
+    </folder>
+  </files>
+  <files for="Main" id="Main1">
+    <folder name="modules" exportAs="modules" FilePath="\modules">
+      <folder name="mod_my_showcase" readInNodes="true" archiveAs="mod_my_showcase" langFile="item" addFile="IndexHtmlFile" formFile="install" listContentsTo="/extension/files" FilePath="\modules\mod_my_showcase" ArchivePath="\mod_my_showcase">
+        <!-- Make sure the intall file is loaded first, so its parameters can be used. -->
+        <file template="module.xml" archiveAs="" langFile="item.sys" install="true" openJform="true" formTitle="Module Params Form" hasForm="install" formFieldset="basic" FilePath="\modules\mod_my_showcase" ArchivePath="" readInNodes="true" addFile="IndexHtmlFile" formFile="install">mod_my_showcase.xml</file>
+        <file template="module.php" FilePath="\modules\mod_my_showcase" ArchivePath="\mod_my_showcase" readInNodes="true" langFile="item" addFile="IndexHtmlFile" formFile="install">mod_my_showcase.php</file>
+        <file template="helper.php" FilePath="\modules\mod_my_showcase" ArchivePath="\mod_my_showcase" readInNodes="true" langFile="item" addFile="IndexHtmlFile" formFile="install">helper.php</file>
+        <folder name="tmpl" FilePath="\modules\mod_my_showcase\tmpl" ArchivePath="\mod_my_showcase\tmpl" readInNodes="true" langFile="item" addFile="IndexHtmlFile" formFile="install">
+          <file template="tmpl.php" FilePath="\modules\mod_my_showcase\tmpl" ArchivePath="\mod_my_showcase\tmpl" readInNodes="true" langFile="item" addFile="IndexHtmlFile" formFile="install">default.php</file>
+          <file name="IndexHtmlFile" processFile="true" function="CreateIndexHtmlFile" FilePath="\modules\mod_my_showcase\tmpl" ArchivePath="\mod_my_showcase\tmpl" readInNodes="true" langFile="item" addFile="IndexHtmlFile" formFile="install">index.html</file>
+        </folder>
+        <file name="IndexHtmlFile" processFile="true" function="CreateIndexHtmlFile" FilePath="\modules\mod_my_showcase" ArchivePath="\mod_my_showcase" readInNodes="true" langFile="item" addFile="IndexHtmlFile" formFile="install">index.html</file>
+      </folder>
+    </folder>
+    <folder name="media" exportAs="media" FilePath="\media">
+      <folder name="mod_my_showcase" archiveAs="media" readInNodes="true" addFile="IndexHtmlFile" listContentsTo="/extension/media" FilePath="\media\mod_my_showcase" ArchivePath="\media">
+        <folder name="css" FilePath="\media\mod_my_showcase\css" ArchivePath="\media\css" readInNodes="true" addFile="IndexHtmlFile">
+          <file name="IndexHtmlFile" processFile="true" function="CreateIndexHtmlFile" FilePath="\media\mod_my_showcase\css" ArchivePath="\media\css" readInNodes="true" addFile="IndexHtmlFile">index.html</file>
+        </folder>
+        <folder name="images" FilePath="\media\mod_my_showcase\images" ArchivePath="\media\images" readInNodes="true" addFile="IndexHtmlFile">
+          <file name="IndexHtmlFile" processFile="true" function="CreateIndexHtmlFile" FilePath="\media\mod_my_showcase\images" ArchivePath="\media\images" readInNodes="true" addFile="IndexHtmlFile">index.html</file>
+        </folder>
+        <folder name="js" FilePath="\media\mod_my_showcase\js" ArchivePath="\media\js" readInNodes="true" addFile="IndexHtmlFile">
+          <file name="IndexHtmlFile" processFile="true" function="CreateIndexHtmlFile" FilePath="\media\mod_my_showcase\js" ArchivePath="\media\js" readInNodes="true" addFile="IndexHtmlFile">index.html</file>
+        </folder>
+        <file name="IndexHtmlFile" processFile="true" function="CreateIndexHtmlFile" FilePath="\media\mod_my_showcase" ArchivePath="\media" readInNodes="true" addFile="IndexHtmlFile">index.html</file>
+      </folder>
+    </folder>
+  </files>
+</templateFiles>

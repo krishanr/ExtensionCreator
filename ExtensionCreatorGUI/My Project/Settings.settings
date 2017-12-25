@@ -1,0 +1,32 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="ExtensionFileDialogInitialDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Filters" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;//extensionType[.='module']&lt;/string&gt;
+  &lt;string&gt;//extensionType[.='plugin']&lt;/string&gt;
+  &lt;string&gt;//extensionType[.='component']&lt;/string&gt;
+  &lt;string&gt;//extensionType[.='library']&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="SelectedFilter" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ExtensionXmlFiles" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;TemplateManifests/classicautos.xml&lt;/string&gt;
+  &lt;string&gt;TemplateManifests/component.xml&lt;/string&gt;
+  &lt;string&gt;TemplateManifests/module.xml&lt;/string&gt;
+  &lt;string&gt;TemplateManifests/plugin.xml&lt;/string&gt;
+  &lt;string&gt;TemplateManifests/library.xml&lt;/string&gt;
+  &lt;string&gt;TemplateManifests/basic/basic.xml&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

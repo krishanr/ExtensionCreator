@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension title="Purchase Order Component">
+  <parameters>
+    <loadTemplate from="joomla/component_j3.x.xml" select="component/parameters/*" />
+    <component>
+      <!-- If name is not specified, it is auto-generated using the nameType parameter. -->
+      <label>Purchase Order</label>
+      <!-- The description is optional and defaults to the name (not yet implemented)-->
+      <description>Software for managing purchase orders in a business.</description>
+      <!-- Currently the default view for the back end. -->
+      <defaultView>purchases</defaultView>
+      <joomlaVersion>3.4.3</joomlaVersion>
+      <mySqlFile relUri="true">purchase_order_app_test_database.sql</mySqlFile>
+      <tablePrefix>#__</tablePrefix>
+    </component>
+    <site>purchaseorder.com</site>
+  </parameters>
+  <tasks>
+    <!-- Order matters, the tasks are run in the order seen here. -->
+    <!-- Language files need to go first, so the other files can add to them. -->
+    <task name="Language">
+      <parameters>
+        <ran>true</ran>
+      </parameters>
+    </task>
+    <task name="Main">
+      <parameters>
+        <ran>true</ran>
+      </parameters>
+    </task>
+    <task name="BasicBackend">
+      <parameters>
+        <table>po_vendors</table>
+        <nameObject>vendor</nameObject>
+        <nameObjectList>vendors</nameObjectList>
+        <canEdit>true</canEdit>
+        <canCreate>true</canCreate>
+        <menu>
+          <menu>true</menu>
+        </menu>
+        <ran>true</ran>
+      </parameters>
+    </task>
+    <task name="BasicBackend">
+      <parameters>
+        <table>po_divisions</table>
+        <nameObject>division</nameObject>
+        <nameObjectList>divisions</nameObjectList>
+        <canEdit>true</canEdit>
+        <canCreate>true</canCreate>
+        <menu>
+          <menu>true</menu>
+        </menu>
+        <ran>true</ran>
+      </parameters>
+    </task>
+    <task name="BasicBackend">
+      <parameters>
+        <table>po_projects</table>
+        <nameObject>project</nameObject>
+        <nameObjectList>projects</nameObjectList>
+        <canEdit>true</canEdit>
+        <canCreate>true</canCreate>
+        <menu>
+          <menu>true</menu>
+        </menu>
+        <ran>true</ran>
+      </parameters>
+    </task>
+    <task name="BasicBackend">
+      <parameters>
+        <table>po_departments</table>
+        <nameObject>department</nameObject>
+        <nameObjectList>departments</nameObjectList>
+        <canEdit>true</canEdit>
+        <canCreate>true</canCreate>
+        <menu>
+          <menu>true</menu>
+        </menu>
+        <ran>true</ran>
+      </parameters>
+    </task>
+    <task name="BasicBackend">
+      <parameters>
+        <table>po_purchases</table>
+        <nameObject>purchase</nameObject>
+        <nameObjectList>purchases</nameObjectList>
+        <canEdit>true</canEdit>
+        <canCreate>true</canCreate>
+        <menu>
+          <menu>true</menu>
+        </menu>
+        <ran>true</ran>
+      </parameters>
+    </task>
+    <task name="BasicBackend">
+      <parameters>
+        <table>po_line_items</table>
+        <nameObject>lineitem</nameObject>
+        <nameObjectList>lineitems</nameObjectList>
+        <canEdit>true</canEdit>
+        <canCreate>true</canCreate>
+        <menu>
+          <menu>true</menu>
+        </menu>
+        <ran>true</ran>
+      </parameters>
+    </task>
+    <task name="BasicBackend">
+      <parameters>
+        <table>po_activities</table>
+        <nameObject>activity</nameObject>
+        <nameObjectList>activities</nameObjectList>
+        <canEdit>true</canEdit>
+        <canCreate>true</canCreate>
+        <menu>
+          <menu>true</menu>
+        </menu>
+        <ran>true</ran>
+      </parameters>
+    </task>
+    <task name="BasicBackend">
+      <parameters>
+        <table>po_purchase_items</table>
+        <nameObject>purchaseitem</nameObject>
+        <nameObjectList>purchaseitems</nameObjectList>
+        <canEdit>true</canEdit>
+        <canCreate>true</canCreate>
+        <menu>
+          <menu>true</menu>
+        </menu>
+        <ran>true</ran>
+      </parameters>
+    </task>
+    <task name="BasicBackend">
+      <parameters>
+        <table>po_purchase_comments</table>
+        <nameObject>purchasecomment</nameObject>
+        <nameObjectList>purchasecomments</nameObjectList>
+        <canEdit>true</canEdit>
+        <canCreate>true</canCreate>
+        <menu>
+          <menu>true</menu>
+        </menu>
+        <ran>true</ran>
+      </parameters>
+    </task>
+    <task name="Field">
+      <parameters>
+        <parent>list</parent>
+        <name>division</name>
+        <dynamicList>
+          <table>po_divisions</table>
+          <value>id</value>
+          <text>division_num</text>
+          <published>true</published>
+        </dynamicList>
+        <ran>true</ran>
+      </parameters>
+    </task>
+    <task name="Field">
+      <parameters>
+        <parent>list</parent>
+        <name>department</name>
+        <dynamicList>
+          <table>po_departments</table>
+          <value>id</value>
+          <text>department_name</text>
+          <published>true</published>
+        </dynamicList>
+        <ran>true</ran>
+      </parameters>
+    </task>
+    <task name="Field">
+      <parameters>
+        <parent>list</parent>
+        <name>project</name>
+        <dynamicList>
+          <table>po_projects</table>
+          <value>id</value>
+          <text>project_num</text>
+          <published>true</published>
+        </dynamicList>
+        <ran>true</ran>
+      </parameters>
+    </task>
+    <task name="Field">
+      <parameters>
+        <parent>list</parent>
+        <name>lineitem</name>
+        <dynamicList>
+          <table>po_line_items</table>
+          <value>id</value>
+          <text>description</text>
+          <published>true</published>
+        </dynamicList>
+        <ran>true</ran>
+      </parameters>
+    </task>
+    <task name="Field">
+      <parameters>
+        <parent>list</parent>
+        <name>vendor</name>
+        <dynamicList>
+          <table>po_vendors</table>
+          <value>id</value>
+          <text>company</text>
+          <published>true</published>
+        </dynamicList>
+        <ran>true</ran>
+      </parameters>
+    </task>
+    <task name="Helpers">
+      <parameters>
+        <ran>true</ran>
+      </parameters>
+    </task>
+  </tasks>
+  <loadTemplate from="joomla/component_j3.x.xml" select="component/taskDefinitions" />
+</extension>

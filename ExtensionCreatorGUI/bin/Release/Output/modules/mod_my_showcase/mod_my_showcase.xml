@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.0"
+	client="site"
+	method="upgrade">
+	<name>MOD_MY_SHOWCASE</name>
+	<author>Krishan Rajaratnam</author>
+	<creationDate>05/20/2017 00:00:00</creationDate>
+	<copyright>Copyright (C) 2005 - 2016 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>kr.rajaratnam@mail.utoronto.ca</authorEmail>
+	<authorUrl>http://krishanr.nfshost.com/</authorUrl>
+	<version>1.0.0</version>
+	<description>Displays an image and some text in a container.</description>
+	<files
+		folder="mod_my_showcase">
+		<folder>tmpl</folder>
+		<filename
+			module="mod_my_showcase">mod_my_showcase.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<!-- Media files -->
+	<media
+		destination="mod_my_showcase"
+		folder="media">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>
+	</media>
+	<languages
+		folder="language">
+		<language
+			tag="en-GB">en-GB.mod_my_showcase.ini</language>
+		<language
+			tag="en-GB">en-GB.mod_my_showcase.sys.ini</language>
+	</languages>
+	<config>
+		<fields
+			name="params">
+			<fieldset
+				name="basic"
+				label="Basic" />
+			<fieldset
+				name="advanced"
+				label="Advanced">
+				<field
+					p3:type="modulelayout"
+					name="layout"
+					label="Jfield_Alt_Layout_Label"
+					type="modulelayout"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+				<field
+					p3:type="text"
+					name="moduleclass_sfx"
+					label="Com_Modules_Field_Moduleclass_Sfx_Label"
+					type="text"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					size="30" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+				<field
+					p3:type="list"
+					name="cache"
+					label="Com_Modules_Field_Caching_Label"
+					type="list"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+					default="1"
+					validate="options"
+					size="1" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					p3:type="text"
+					name="cache_time"
+					label="Com_Modules_Field_Cache_Time_Label"
+					type="text"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+					default="900"
+					size="30" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

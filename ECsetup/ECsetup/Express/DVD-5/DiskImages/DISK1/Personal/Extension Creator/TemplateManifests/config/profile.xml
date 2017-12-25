@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profile>
+	<author>Krishan Rajaratnam</author> <!-- George Smith -->
+	<authorEmail>kr.rajaratnam@mail.utoronto.ca</authorEmail> <!-- name@example.com -->
+	<authorUrl>http://krishanr.nfshost.com/</authorUrl> <!-- https://www.example.com/ -->
+	<copyright>Copyright (C) 2005 - 2016 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+</profile>

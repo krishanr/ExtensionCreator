@@ -34,7 +34,7 @@ Public Class frmMain
             Next
             'Lets exit after ExtensionMgr was initalized.
             'FormClosing event will save My.Settings
-            Me.Close()
+            Close()
             Exit Sub
         End If
 

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a component model for Joomla Components (Originally designed for Joomla 1.6). -->
+<component>
+	<parameters>
+		<loadTemplate from="extension.xml" select="extension/parameters/*" />
+		<config>
+			<templateClass>JComponent</templateClass>
+			<assemblyFile>JoomlaLibrary.dll</assemblyFile>
+			<extensionPrefix>com</extensionPrefix>
+			<extensionType>component</extensionType>
+		</config>
+		<!-- The name should just be a string of letters (the camel-cased name). -->
+		<nameType>camelcase</nameType>
+		<files>
+			<!-- Root directory for template files. -->
+			<TemplateFolder relUri="true">..\..\Templates\j16_component</TemplateFolder>
+    		<templateFiles internal="true" />
+		</files>
+	</parameters>
+	<!-- Before a task is used under tasks, it must be defined below, and the start and end functions 
+	     must exist in the class defined in the extension attributes above. -->
+	<!-- The parameter values for taskDefinitions are either defaults, or are there just
+	     to serve as an example. Most of them should be overridden in the actual task 
+	     parameters. -->
+	<taskDefinitions>
+		<taskDefinition name="Main" />
+		<loadTemplate from="extension.xml" select="extension/taskDefinitions/*" />
+		<taskDefinition name="Helpers" />
+		<taskDefinition name="Field">
+			<parameters>
+				<!-- This gets appended to the class name for the JFormField,
+				     it should be in camel case. -->
+				<name>CustomList</name>
+				<!-- The suffix of the class this field is inheriting from (in camel case).
+				     i.e. if inheriting from JFormFieldList, then type in List below.
+				     If you are only inheriting from JFormField then leave it blank. -->
+				<parent></parent>
+				<!-- NO LONGER USED! only admin. The name of the root folder this will be under.
+				     Type in either admin, or site (usually under admin).  -->
+				<location>admin</location>
+			</parameters>
+		</taskDefinition>
+		<taskDefinition name="MVC">
+			<parameters>
+				<message></message>
+			</parameters>
+		</taskDefinition>
+		<taskDefinition name="SiteForm">
+			<parameters>
+				<!-- Make sure not to include the table prefix in the table field -->
+				<table>Database</table>
+				<nameObject>example</nameObject>
+				<!-- This will be used as the main table alias for database queries 
+				     in model files and other associated files in this task. -->
+				<message>Displays a form the users can access from the front end.</message>
+			</parameters>
+		</taskDefinition>
+		<taskDefinition name="DatabaseToAdminConnector">
+			<parameters>
+				<!-- Make sure not to include the table prefix in the table field -->
+				<table>Database</table>
+				<nameObject>example</nameObject>
+				<nameObjectList>examples</nameObjectList>
+				<!--  Adds create buttons. -->
+				<canCreate>True</canCreate>
+				<!--  Adds edit buttons. -->
+				<canEdit>True</canEdit>
+				<tableAlias>a</tableAlias>
+				<menu>
+					<menu>False</menu>
+					<!--  If label is used, labelKey must be set. -->
+				</menu>
+			</parameters>
+		</taskDefinition>
+	</taskDefinitions>
+</component>

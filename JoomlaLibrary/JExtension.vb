@@ -7,6 +7,7 @@ Imports JForm
 Imports System.Windows.Forms
 Imports System.Xml.XPath
 Imports System.Text.RegularExpressions
+Imports System.Reflection
 
 'TTODO: Make this an abstract class
 Public Class JExtension
@@ -32,11 +33,31 @@ Public Class JExtension
         DerivedNamespace = "JoomlaLibrary"
     End Sub
 
-    'Obsolete
-    Public Sub New(ByVal m_ExtensioXmlFile As String, ByVal m_TemplateFolder As String, _
-                   ByVal m_TempFolder As String)
-        MyBase.New(m_ExtensioXmlFile, m_TemplateFolder, m_TempFolder)
+    Protected Overrides Sub loadFolders()
+        ExtensionFilesXmlFile = ExtensionParameters.MyItem("templateFiles")
+        If ExtensionFilesXmlFile = "" Then
+            Dim ExtPrefix As String = ExtensionParameters.GetValue("extensionPrefix")
+            Dim assembly As Assembly = Reflection.Assembly.GetExecutingAssembly()
+            Dim ExtFilesName As String = ""
+            Select Case ExtPrefix
+                Case "com"
+                    ExtFilesName = "JoomlaLibrary.component_files.xml"
+                Case "mod"
+                    ExtFilesName = "JoomlaLibrary.module_files.xml"
+                Case "plg"
+                    ExtFilesName = "JoomlaLibrary.plugin_files.xml"
+                Case "lib"
+                    ExtFilesName = "JoomlaLibrary.library_files.xml"
+            End Select
 
+            ExtensionFilesXmlFile = Path.GetTempFileName()
+            Using sr As New StreamReader(assembly.GetManifestResourceStream(ExtFilesName))
+                Using sw As New StreamWriter(ExtensionFilesXmlFile)
+                    sw.Write(sr.ReadToEnd)
+                End Using
+            End Using
+        End If
+        MyBase.loadFolders()
     End Sub
 
     Protected Overrides Sub AddToExtensionParameters()
@@ -107,7 +128,7 @@ Public Class JExtension
                 myTempFile.WriteLine("<html><body bgcolor='#FFFFFF'></body></html>")
                 'myTempFile.Close()
             End Using
-            
+
             Return TempTemplateFile
         Catch ex As Exception
             TempTemplateFile = ""

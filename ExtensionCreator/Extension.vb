@@ -231,22 +231,26 @@ Public MustInherit Class Extension
     End Sub
 
     'Loads the working and output folder, and sets ExtensionFilesXmlFile (also checking ExtensionFilesXmlFile exists).
-    Protected Sub loadFolders()
+    Protected Overridable Sub loadFolders()
         Dim RootDir As String
         If UnRenderedExtensionXmlFile <> "" Then
             RootDir = GetDirectoryName(UnRenderedExtensionXmlFile)
         Else
             RootDir = GetDirectoryName(ExtensionXmlFile)
         End If
-        ExtensionFilesXmlFile = ExtensionParameters.MyItem("templateFiles")
-        If Not IsPathRooted(ExtensionFilesXmlFile) Then
-            ExtensionFilesXmlFile = RootDir & "\" & ExtensionFilesXmlFile
-        End If
-        If Not My.Computer.FileSystem.FileExists(ExtensionFilesXmlFile) Then
-            Dim sw As New StringWriter
-            sw.Write("The xml file containing the file information for the {0} template was not found. The file name should be {1}", _
-                     ExtensionTitle, ExtensionFilesXmlFile)
-            Throw New FileNotFoundException(sw.ToString())
+
+        'Since derived classes can set the ExtensionFilesXmlFile, only set it if not already set.
+        If ExtensionFilesXmlFile = "" Then
+            ExtensionFilesXmlFile = ExtensionParameters.MyItem("templateFiles")
+            If Not IsPathRooted(ExtensionFilesXmlFile) Then
+                ExtensionFilesXmlFile = RootDir & "\" & ExtensionFilesXmlFile
+            End If
+            If Not My.Computer.FileSystem.FileExists(ExtensionFilesXmlFile) Then
+                Dim sw As New StringWriter
+                sw.Write("The xml file containing the file information for the {0} template was not found. The file name should be {1}", _
+                         ExtensionTitle, ExtensionFilesXmlFile)
+                Throw New FileNotFoundException(sw.ToString())
+            End If
         End If
 
         DirMgr = New DirectoryManager(ExtensionFilesXmlFile, ExtensionParameters.MyItem("TemplateFolder"), _
@@ -706,7 +710,19 @@ Public MustInherit Class Extension
                 runEx = ex
             Finally
                 If host.Errors.Count > 0 OrElse runEx IsNot Nothing Then
-                    RaiseEvent TemplateError(host, runEx)
+                    If host.Errors.Count > 0 Then
+                        For i As Integer = 0 To host.Errors.Count - 1
+                            If host.Errors(i).ErrorText IsNot Nothing _
+                                AndAlso host.Errors(i).ErrorText.Contains("ExParameterNotFoundException") Then
+                                status = "Done With Error"
+                            End If
+                        Next
+                    End If
+                    If status = "Done With Error" Then
+                        host.ErrorResolved = False
+                    Else
+                        RaiseEvent TemplateError(host, runEx)
+                    End If
                     If Not host.ErrorResolved Then
                         status = "Done With Error"
                     Else
@@ -879,4 +895,19 @@ Public Class ExtensionItem
         End Set
     End Property
 
+End Class
+
+Public Class ExParameterNotFoundException
+    Inherits Exception
+
+    Public Sub New()
+    End Sub
+
+    Public Sub New(ByVal message As String)
+        MyBase.New(message)
+    End Sub
+
+    Public Sub New(ByVal message As String, ByVal inner As Exception)
+        MyBase.New(message, inner)
+    End Sub
 End Class

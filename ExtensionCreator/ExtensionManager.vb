@@ -256,7 +256,7 @@ Public Class ExtensionManager
         If ExtensionType IsNot Nothing Then
             Dim myAssembly As [Assembly]
             myAssembly = [Assembly].LoadFrom(ChildAssemblyPath)
-            Dim myTypes As System.Type() = myAssembly.GetTypes
+            Dim myTypes As System.Type() = myAssembly.GetTypes()
             For Each singleType In myTypes
                 If ExtensionType.IsAssignableFrom(singleType) And singleType.Name = ChildName Then
                     ChildInstance = Activator.CreateInstance(singleType, Params)

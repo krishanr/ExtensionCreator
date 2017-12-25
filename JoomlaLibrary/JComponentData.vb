@@ -254,6 +254,9 @@ Public Class JComponentData
                 PField.Options.Add(myOpt)
                 Field = PField
             End If
+            If Not IsDBNull(Row("COLUMN_KEY")) AndAlso Row("COLUMN_KEY") = "PRI" Then
+                Field.ReadOnlyField = True
+            End If
             Field.Name = Row("COLUMN_NAME")
             Field.Description &= Row("COLUMN_COMMENT")
             If Not IsDBNull(Row("COLUMN_DEFAULT")) Then

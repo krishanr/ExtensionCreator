@@ -1,0 +1,36 @@
+<#@ template inherits="ETemplate" language="VB" #>
+<# Dim JExt as JExtension = CType(Ext, JExtension) #>
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="<#= Value("Extension.joomlaVersion") #>" type="plugin" group="<#= Value("Extension.group") #>">
+	<name><#= JExt.GenText("plg_" & Value("Extension.group") & "_" &  Value("Extension.name"), StrConv(Value("Extension.group"), VbStrConv.ProperCase) & " - " & Value("Extension.label"), JExt.LangFiles.Item("admin.sys")) #></name>
+	<author><#= Value("Extension.author") #></author>
+	<creationDate><#= Today.Date #></creationDate>
+    <copyright><#= Value("Extension.copyright") #></copyright>
+    <license><#= Value("Extension.license") #></license>
+    <authorEmail><#= Value("Extension.authorEmail") #></authorEmail>
+    <authorUrl><#= Value("Extension.authorUrl") #></authorUrl>
+    <version><#= Value("Extension.version") #></version>
+    <description><#= Value("Extension.description") #></description>
+
+	<files folder="<#= Value("Extension.name") #>">
+	</files>
+	<!-- Media files -->
+	<media destination="<#= Value("Extension.fullName") #>" folder="media">
+	</media>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_<#= Value("Extension.group") #>_<#= Value("Extension.name") #>.ini</language>
+		<language tag="en-GB">en-GB.plg_<#= Value("Extension.group") #>_<#= Value("Extension.name") #>.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields
+			name="params">
+			<fieldset
+				name="basic">
+			</fieldset>
+			<fieldset
+				name="advanced">
+			</fieldset>
+		</fields>
+	</config>
+</extension>

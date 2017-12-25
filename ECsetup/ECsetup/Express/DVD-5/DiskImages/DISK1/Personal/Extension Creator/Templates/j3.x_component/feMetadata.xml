@@ -1,0 +1,7 @@
+<#@ template inherits="ETemplate" language="VB" #>
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+        <view title='&lt;%= Value("Task.nameObject") %&gt;' hidden="false">
+                <message><![CDATA[<#= Value("Task.nameObject") #>]]></message>
+        </view>
+</metadata>

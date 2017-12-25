@@ -1,7 +1,9 @@
 ﻿Imports System.Dynamic
+Imports System.Runtime.Serialization
 
 Public Class Task
     Inherits DynamicObject
+    Implements ISerializable
 
     Private Parameters As New Dictionary(Of String, String)
 
@@ -13,6 +15,15 @@ Public Class Task
                 Parameters.Add(Param, "")
             End If
         Next
+    End Sub
+
+    'The following two subs implement ISerializable
+    Protected Sub New(info As SerializationInfo, context As StreamingContext)
+        Parameters = info.GetValue("parameters", (New Dictionary(Of String, String)).GetType)
+    End Sub
+
+    Public Sub GetObjectData(info As SerializationInfo, context As StreamingContext) Implements ISerializable.GetObjectData
+        info.AddValue("parameters", Parameters, (New Dictionary(Of String, String)).GetType)
     End Sub
 
     ' Implement the TryGetMember method of the DynamicObject class for dynamic member calls.

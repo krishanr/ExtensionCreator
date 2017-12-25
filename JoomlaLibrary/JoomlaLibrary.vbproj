@@ -42,18 +42,18 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>JoomlaLibrary.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Irony">
       <HintPath>..\..\Irony_2013_12_12\Irony.Samples\bin\Debug\Irony.dll</HintPath>
     </Reference>
     <Reference Include="Irony.Samples">
       <HintPath>..\..\Irony_2013_12_12\Irony.Samples\bin\Debug\Irony.Samples.dll</HintPath>
-    </Reference>
-    <Reference Include="JForm">
-      <HintPath>..\..\..\..\Visual Studio 2010\Projects\another1\JForm\bin\Release\JForm.exe</HintPath>
-    </Reference>
-    <Reference Include="JoomlaGUI">
-      <HintPath>..\..\..\..\Visual Studio 2010\Projects\TemplateMaker\JoomlaGUI\bin\Release\JoomlaGUI.exe</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -103,6 +103,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="JoomlaLibrary.pfx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -114,10 +115,26 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Visual Studio 2010\Projects\another1\JForm\JForm.vbproj">
+      <Project>{152806ae-f197-4fcc-91dc-eaf2bbf577f3}</Project>
+      <Name>JForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Visual Studio 2010\Projects\TemplateMaker\JoomlaGUI\JoomlaGUI.vbproj">
+      <Project>{9d998b72-23ce-4721-a9c4-90f9eaec56ff}</Project>
+      <Name>JoomlaGUI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ExtensionCreator\ExtensionCreator.vbproj">
       <Project>{2f935f90-c8ad-455c-b202-91af65037fe1}</Project>
       <Name>ExtensionCreator</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TemplateManifests\component_files.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemplateManifests\library_files.xml" />
+    <EmbeddedResource Include="TemplateManifests\module_files.xml" />
+    <EmbeddedResource Include="TemplateManifests\plugin_files.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

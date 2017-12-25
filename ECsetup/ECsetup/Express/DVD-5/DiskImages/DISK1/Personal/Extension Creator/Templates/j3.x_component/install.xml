@@ -1,0 +1,89 @@
+<#@ template inherits="ETemplate" language="VB" #>
+<#@ import namespace="System.Linq" #>
+<# Dim JExt as JExtension = CType(Ext, JExtension) #>
+<# 	        'Count the number of BasicBackend and SiteForm tasks'
+			Dim BackCn = Aggregate Task In JExt.TaskDictionary
+						  Where Task.Value.item("TaskName") Like "BasicBackend"
+						  Into Count()
+			Dim SiteCn = Aggregate Task In JExt.TaskDictionary
+						 Where Task.Value.item("TaskName") Like "SiteForm"
+						 Into Count()
+#>
+<extension type="component" version="<#= Value("Extension.joomlaVersion") #>" method="<#= Value("Extension.intallMethod") #>">
+    <name><#= JExt.GenText("com_" & Value("Extension.name"), Value("Extension.label"), JExt.LangFiles.Item("admin.sys")) #></name>
+    <!-- The following elements are optional and free of formatting constraints -->
+    <creationDate><#= Today.Date #></creationDate>
+    <author><#= Value("Extension.author") #></author>
+    <authorEmail><#= Value("Extension.authorEmail") #></authorEmail>
+    <authorUrl><#= Value("Extension.authorUrl") #></authorUrl>
+    <copyright><#= Value("Extension.copyright") #></copyright>
+    <license><#= Value("Extension.license") #></license>
+    <!--  The version string is recorded in the components table -->
+    <version><#= Value("Extension.version") #></version>
+    <!-- The description is optional and defaults to the name -->
+    <description><#= Value("Extension.description") #></description>
+
+<#  If (BackCn > 0 OrElse SiteCn > 0) AndAlso KeyExists("Extension.mySqlFile") #>
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+<#	End If #>
+    <files folder="site">
+    </files>
+	<!-- Media files -->
+	<media destination="<#= Value("Extension.fullName") #>" folder="media">
+	</media>
+   	<languages folder="site/language">
+		<language tag="en-GB">en-GB.com_<#= StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>.ini</language>
+	</languages>
+	<!-- Runs on install/uninstall/update; New in 1.6 -->
+	<scriptfile>script.php</scriptfile>
+    <administration>
+<# 	        If BackCn > 0 	#>
+		<menu><#= JExt.GenText("com_" & Value("Extension.name"), Value("Extension.label"), JExt.LangFiles.Item("admin.sys")) #></menu>
+<#			End If #>
+<# 	        'Check if Helpers task was run.'
+			Dim HelpersCn = Aggregate Task In JExt.TaskDictionary
+						  Where Task.Value.item("TaskName") Like "Helpers"
+						  Into Count()
+		 	If HelpersCn > 0
+			Dim Tasks = From Task In JExt.TaskDictionary
+					   Where Task.Value.item("TaskName") Like "*"
+					   Select Task.Value.item("TaskParameters") '= JExt.GetTasks("*", "menu", "link", "view", "image", "alt", "label", "labelKey","nameObjectList")'
+		#>
+		<submenu>
+		<!--
+			Note that all & must be escaped to &amp; for the file to be valid
+			XML and be parsed by the installer
+		-->
+<#		   Dim Menu 
+		   For Each Menu In Tasks
+		   Dim MenuTitle, MenuLink, MenuView, MenuImage, MenuAlt as string
+		   If Menu.ContainsKey("menu") AndAlso  Boolean.Parse(Menu("menu")) Then
+			   MenuTitle = If(Menu.ContainsKey("label"), JExt.GenText(Menu("labelKey"), Menu("label"), JExt.LangFiles.Item("admin.sys")), _
+													 JExt.GenText(Menu("nameObjectList"), StrConv(Menu("nameObjectList"), VbStrConv.Propercase))) 
+			   MenuLink = If(Menu.ContainsKey("link"), Menu("link"), _
+												   "option=com_" & StrConv(Value("Extension.name"), VbStrConv.Lowercase) & "&amp;view=" & Menu("nameObjectList")) 
+			   MenuView = If(Menu.ContainsKey("view"), Menu("view"), _
+												   Menu("nameObjectList")) 
+			   MenuImage = If(Menu.ContainsKey("image"), Menu("image"), _
+												   "class:" & StrConv(Value("Extension.name"), VbStrConv.Lowercase) & "-" & Menu("nameObjectList")) 
+			   MenuAlt = If(Menu.ContainsKey("alt"), Menu("alt"), _
+												   Value("Extension.name") & "/" & Menu("nameObjectList")) 
+			#>
+			<menu link="<#= MenuLink #>" view="<#= MenuView #>" img="<#= MenuImage #>"
+				alt="<#= MenuAlt #>"><#= MenuTitle #></menu>
+<#		   End if
+		   Next #>
+		</submenu>
+<#		   End If #>
+        <files folder="admin">
+        </files>
+        <languages folder="admin/language">
+			<language tag="en-GB">en-GB.com_<#= StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>.ini</language>
+			<language tag="en-GB">en-GB.com_<#= StrConv(Value("Extension.name"), VbStrConv.Lowercase) #>.sys.ini</language>
+		</languages>
+    </administration>
+</extension>

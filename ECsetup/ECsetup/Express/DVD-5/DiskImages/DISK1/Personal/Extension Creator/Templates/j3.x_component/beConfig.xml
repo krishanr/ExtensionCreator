@@ -1,0 +1,25 @@
+<#@ template inherits="ETemplate" language="VB" #>
+<# Dim JExt as JExtension = CType(Ext, JExtension) #>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- see http://docs.joomla.org/Form_field -->
+<# JExt.GenText("configuration", Value("Extension.label") & " Configuration") #>
+<config>
+	<fieldset
+		name="main"
+		label="Main">
+	</fieldset>
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC">
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox"
+			validate="rules"
+			filter="rules"
+			component="<#= Value("Extension.fullName") #>" 
+			section="component" />
+	</fieldset>
+</config>
