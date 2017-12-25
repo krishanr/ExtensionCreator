@@ -1,0 +1,21 @@
+﻿<!-- see http://docs.joomla.org/Form_field -->
+<config>
+	<fieldset
+		name="main"
+		label="Main" />
+	<fieldset
+		name="permissions"
+		label="Jconfig_Permissions_Label"
+		description="JCONFIG_PERMISSIONS_DESC">
+		<field
+			p3:type="rules"
+			name="rules"
+			label="Jconfig_Permissions_Label"
+			type="rules"
+			class="inputbox"
+			filter="rules"
+			validate="rules"
+			component="com_listing"
+			section="component" xmlns:p3="http://www.w3.org/2001/XMLSchema-instance" />
+	</fieldset>
+</config>

@@ -152,80 +152,38 @@ Public Class JComponent
 
 #End Region
 
-#Region "Functions called from files"
-
-    'DO not use anymore, use the CreateForm in Utility Functions
-    Public Overloads Function CreateForm(ByVal myTempFileLoc As String, ByVal FileNode As XElement)
-        Dim myForm As New frmJForm
-        Try
-            myTempFileLoc = Path.GetTempFileName()
-            myForm.OutputFileName = myTempFileLoc
-            myForm.SaveMethod = JForm.form.SaveMethod.Form
-            myForm.Text = GetActiveTaskName() & " Form"
-            Try
-                Dim ActiveTask As Microsoft.VisualBasic.Collection = GetActiveTaskCollection()
-                If ActiveTask.Contains("JDataTable") Then
-                    Dim myJComponentData As JComponentData = ActiveTask.Item("JDataTable")
-                    myJComponentData.FillForm(myForm.Form)
-                Else
-                    'TODO: change title
-                    Throw New Exception("Unable to fill form")
-                    'TODO: add text to the top of the form saying that jdatatable was not loaded so form, 
-                    'couldn't be filled.
-                End If
-            Catch ex As Exception
-                Throw New Exception(ex.Message)
-                'TODO: add text to the top of the form saying there was an error trying to load the form.
-            End Try
-            If myForm.ShowDialog() = DialogResult.OK Then
-                myForm.Close()
-                Return myTempFileLoc
-            Else
-                'TODO: Tell them no form was created?
-                myForm.Close()
-                Return ""
-            End If
-        Catch ex As Exception
-            myTempFileLoc = ""
-            myForm.Close()
-            Return ex
-        End Try
-    End Function
-
-#End Region
-
 #Region "Utility Functions"
 
     'Requires JDataTable to be in the active task collection, and have been filled by the site form or database to admin connector,
     'if FillMethod <> ""
     'OR
     'if FillMethod = "" then just creates an empty form with title FormName and saves using SaveMethod.
-    Public Overloads Function CreateForm(ByVal FormName As String, ByVal SaveMethod As JForm.form.SaveMethod, Optional ByVal FillMethod As String = "") As String
-        Dim myForm As New frmJForm
-        Dim ActiveTask As Microsoft.VisualBasic.Collection
-        myForm.SaveMethod = SaveMethod
-        myForm.Text = FormName
-        If FillMethod <> "" Then
-            ActiveTask = GetActiveTaskCollection()
-            If Not ActiveTask.Contains("JDataTable") Then
-                'TODO: change title
-                Throw New Exception("Unable to fill form, data to fill the form is not available.")
-                'TODO: add text to the top of the form saying that jdatatable was not loaded so form, 
-                'couldn't be filled.
-            End If
-        End If
-        Select Case FillMethod
-            Case "EditForm"
-                Dim myJComponentData As JComponentData = ActiveTask.Item("JDataTable")
-                myJComponentData.FillForm(myForm.Form)
-            Case "ListForm"
-                Dim myJComponentData As JComponentData = ActiveTask.Item("JDataTable")
-                'Note: only for task database to admin connector
-                'TODO: check if TaskParameters has tableAlias
-                myJComponentData.FillListForm(myForm.Form, ActiveTask.Item("TaskParameters").Item("tableAlias"))
-        End Select
-        Return MyBase.CreateForm(myForm)
-    End Function
+    'Public Overloads Function createform(ByVal formname As String, ByVal savemethod As JForm.form.SaveMethod, Optional ByVal fillmethod As String = "") As String
+    '    Dim myform As New frmJForm
+    '    Dim activetask As Microsoft.VisualBasic.Collection
+    '    myform.SaveMethod = savemethod
+    '    myform.Text = formname
+    '    If fillmethod <> "" Then
+    '        activetask = GetActiveTaskCollection()
+    '        If Not activetask.Contains("jdatatable") Then
+    '            'todo: change title
+    '            Throw New Exception("unable to fill form, data to fill the form is not available.")
+    '            'todo: add text to the top of the form saying that jdatatable was not loaded so form, 
+    '            'couldn't be filled.
+    '        End If
+    '    End If
+    '    Select Case fillmethod
+    '        Case "editform"
+    '            Dim myjcomponentdata As JComponentData = activetask.Item("jdatatable")
+    '            myjcomponentdata.FillForm(myform.Form)
+    '        Case "listform"
+    '            Dim myjcomponentdata As JComponentData = activetask.Item("jdatatable")
+    '            'note: only for task database to admin connector
+    '            'todo: check if taskparameters has tablealias
+    '            myjcomponentdata.FillListForm(myform.Form, activetask.Item("taskparameters").item("tablealias"))
+    '    End Select
+    '    Return MyBase.createform(myform)
+    'End Function
 
     Protected Overrides Sub FillJform(ByRef myForm As JForm.frmJForm, ByVal FileNode As System.Xml.Linq.XElement)
         If FileNode.Attribute("formFillMethod") IsNot Nothing And Not TaskRan Then

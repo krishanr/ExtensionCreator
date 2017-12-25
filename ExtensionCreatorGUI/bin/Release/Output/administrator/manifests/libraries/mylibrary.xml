@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="library"
+	version="1.6.0"
+	method="upgrade">
+	<name>Custom Library</name>
+	<libraryname>mylibrary</libraryname>
+	<!-- The following elements are optional and free of formatting constraints -->
+	<creationDate>12/25/2017 00:00:00</creationDate>
+	<author>Krishan Rajaratnam</author>
+	<authorEmail>kr.rajaratnam@mail.utoronto.ca</authorEmail>
+	<authorUrl>http://krishanr.nfshost.com/</authorUrl>
+	<copyright>Copyright (C) 2005 - 2016 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<!--  The version string is recorded in the components table -->
+	<version>1.0.0</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>A custom library.</description>
+	<files
+		folder="mylibrary">
+		<filename>index.html</filename>
+	</files>
+	<!-- Media files -->
+	<media
+		destination="lib_mylibrary"
+		folder="media">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>
+	</media>
+</extension>

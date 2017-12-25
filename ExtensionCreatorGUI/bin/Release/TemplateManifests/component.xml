@@ -16,14 +16,19 @@
     <!-- Order matters, the tasks are run in the order seen here. -->
     <!-- Language files need to go first, so the other files can add to them. -->
     <task name="Language">
-      <parameters />
+      <parameters>
+        <ran>true</ran>
+      </parameters>
     </task>
     <task name="Main">
-      <parameters />
+      <parameters>
+        <ran>true</ran>
+      </parameters>
     </task>
     <task name="MVC">
       <parameters>
         <nameObject>listing</nameObject>
+        <ran>true</ran>
       </parameters>
     </task>
   </tasks>

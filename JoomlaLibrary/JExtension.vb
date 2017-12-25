@@ -36,26 +36,28 @@ Public Class JExtension
     Protected Overrides Sub loadFolders()
         ExtensionFilesXmlFile = ExtensionParameters.MyItem("templateFiles")
         If ExtensionFilesXmlFile = "" Then
-            Dim ExtPrefix As String = ExtensionParameters.GetValue("extensionPrefix")
-            Dim assembly As Assembly = Reflection.Assembly.GetExecutingAssembly()
-            Dim ExtFilesName As String = ""
-            Select Case ExtPrefix
-                Case "com"
-                    ExtFilesName = "JoomlaLibrary.component_files.xml"
-                Case "mod"
-                    ExtFilesName = "JoomlaLibrary.module_files.xml"
-                Case "plg"
-                    ExtFilesName = "JoomlaLibrary.plugin_files.xml"
-                Case "lib"
-                    ExtFilesName = "JoomlaLibrary.library_files.xml"
-            End Select
+            Throw New Exception("Extension parameters should contain ""templateFiles"".")
+            ' --------- Commented code below is obsolete code, since templateFiles are public. --------
+            'Dim ExtPrefix As String = ExtensionParameters.GetValue("extensionPrefix")
+            'Dim assembly As Assembly = Reflection.Assembly.GetExecutingAssembly()
+            'Dim ExtFilesName As String = ""
+            'Select Case ExtPrefix
+            '    Case "com"
+            '        ExtFilesName = "JoomlaLibrary.component_files.xml"
+            '    Case "mod"
+            '        ExtFilesName = "JoomlaLibrary.module_files.xml"
+            '    Case "plg"
+            '        ExtFilesName = "JoomlaLibrary.plugin_files.xml"
+            '    Case "lib"
+            '        ExtFilesName = "JoomlaLibrary.library_files.xml"
+            'End Select
 
-            ExtensionFilesXmlFile = Path.GetTempFileName()
-            Using sr As New StreamReader(assembly.GetManifestResourceStream(ExtFilesName))
-                Using sw As New StreamWriter(ExtensionFilesXmlFile)
-                    sw.Write(sr.ReadToEnd)
-                End Using
-            End Using
+            'ExtensionFilesXmlFile = Path.GetTempFileName()
+            'Using sr As New StreamReader(assembly.GetManifestResourceStream(ExtFilesName))
+            '    Using sw As New StreamWriter(ExtensionFilesXmlFile)
+            '        sw.Write(sr.ReadToEnd)
+            '    End Using
+            'End Using
         End If
         MyBase.loadFolders()
     End Sub
@@ -184,30 +186,6 @@ Public Class JExtension
         Return GenText(key, "")
     End Function
 
-    'OBSOLETE: use OpenJform
-    'Requires an instance of JForm.frmJform. Opens the form as a dialog then returns the form output,
-    'if the user triggered DialogResult.OK.
-    Public Function CreateForm(ByRef Form As frmJForm) As String
-        Dim Output As String = ""
-        Dim myTempFileLoc As String = Path.GetTempFileName()
-        Try
-            Form.OutputFileName = myTempFileLoc
-            If Form.ShowDialog() = DialogResult.OK Then
-                Using sr As New StreamReader(myTempFileLoc)
-                    Output = sr.ReadToEnd
-                End Using
-            Else
-                'TODO: (optional) maybe put this in an event log..., this is unusual
-            End If
-        Catch ex As Exception
-            Throw New Exception(ex.Message, ex)
-        Finally
-            Form.Close()
-            My.Computer.FileSystem.DeleteFile(myTempFileLoc, FileIO.UIOption.OnlyErrorDialogs, FileIO.RecycleOption.DeletePermanently)
-        End Try
-        Return Output
-    End Function
-
     Private _myForm As frmJForm
     'Should be called after the file has been rendered. i.e. requires a valid xml file.
     Public Sub OpenJForm(ByVal FileNode As XElement, ByVal AbsFilePath As String)
@@ -221,8 +199,6 @@ Public Class JExtension
             _myForm.OutputFileName = AbsFilePath
         Catch ex As Exception
             MsgBox("Unable to load '" & AbsFilePath & "' as a JForm object. Error: " & ex.Message, MsgBoxStyle.Exclamation, "Error opening file")
-            'Give the user a shourtcut to this directory
-            _myForm.FormFileDialog.InitialDirectory = Path.GetDirectoryName(AbsFilePath)
         End Try
         FillJform(_myForm, FileNode)
 
@@ -234,15 +210,20 @@ Public Class JExtension
     Protected Function JFormShowDialog()
         Dim result As Boolean = False
         Try
-            If _myForm.ShowDialog() = DialogResult.OK Then
+            If _myForm.showDialogEnabled AndAlso _myForm.ShowDialog() = DialogResult.OK Then
                 result = True
-            Else
+            ElseIf _myForm.showDialogEnabled Then
                 'TODO: (optional) maybe put this in an event log..., this is unusual
+            Else
+                'Show dialog is not enabled, so just return true.
+                result = True
             End If
         Catch ex As Exception
             'Very unusual, show a message, then move on.
             MsgBox(ex.Message, MsgBoxStyle.Exclamation, "Jform Error")
         Finally
+            'Save loaded form
+            _myForm.Save()
             _myForm.Dispose()
         End Try
         _myForm = Nothing

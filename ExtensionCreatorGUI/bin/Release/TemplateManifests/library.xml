@@ -15,7 +15,11 @@
   <!-- Typical tasks for libraries. -->
   <tasks>
     <!-- Order matters, the tasks are run in the order seen here. -->
-    <task name="Main" />
+    <task name="Main">
+      <parameters>
+        <ran>true</ran>
+      </parameters>
+    </task>
   </tasks>
   <loadTemplate from="joomla/library.xml" select="library/taskDefinitions" />
 </extension>

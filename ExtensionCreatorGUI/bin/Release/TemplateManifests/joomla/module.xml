@@ -14,7 +14,7 @@
 		<files>
 			<!-- Root directory for template files. -->
 			<TemplateFolder relUri="true">..\..\Templates\j16_module</TemplateFolder>
-			<templateFiles internal="true" />
+			<templateFiles relUri="true">module_files.xml</templateFiles>
 		</files>
 	</parameters>
 	<taskDefinitions>

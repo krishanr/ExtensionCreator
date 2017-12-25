@@ -7,6 +7,7 @@
 		<files>
 			<!-- Root directory for template files. -->
 			<TemplateFolder relUri="true">..\..\Templates\j3.x_component</TemplateFolder>
+			<templateFiles relUri="true">component_files.xml</templateFiles>
 		</files>
 	</parameters>
 	<!-- Before a task is used under tasks, it must be defined below, and the start and end functions 
