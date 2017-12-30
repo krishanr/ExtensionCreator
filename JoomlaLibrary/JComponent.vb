@@ -185,7 +185,7 @@ Public Class JComponent
     '    Return MyBase.createform(myform)
     'End Function
 
-    Protected Overrides Sub FillJform(ByRef myForm As JForm.frmJForm, ByVal FileNode As System.Xml.Linq.XElement)
+    Protected Overrides Sub FillJform(ByRef myForm As frmJForm, ByVal FileNode As System.Xml.Linq.XElement)
         If FileNode.Attribute("formFillMethod") IsNot Nothing And Not TaskRan Then
             Dim ActiveTask As Microsoft.VisualBasic.Collection = GetActiveTaskCollection()
             'TODO: not robust since they can use these 'fillMethod's on any file node, even when JDataTable was not loaded.

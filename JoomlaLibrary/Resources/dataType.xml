@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<JFormDataSet xmlns="http://tempuri.org/JFormDataSet.xsd">
+  <dataType>
+    <name>int</name>
+    <type>Integer</type>
+    <size>20</size>
+    <filter>intval</filter>
+  </dataType>
+  <dataType>
+    <name>boolean</name>
+    <type>radio</type>
+    <validate>boolean</validate>
+  </dataType>
+</JFormDataSet>

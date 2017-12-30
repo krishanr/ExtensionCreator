@@ -188,7 +188,7 @@ Public Class JComponentData
         Return ""
     End Function
 
-    Protected Friend Sub FillForm(ByRef Form As JForm.form)
+    Protected Friend Sub FillForm(ByRef Form As form)
         Dim Row As DataRow
         Dim Fieldset As New JFieldset
         'TODO: make this a param
@@ -197,26 +197,26 @@ Public Class JComponentData
             Dim Field As JField
             Select Case StrConv(Row("DATA_TYPE"), VbStrConv.Lowercase)
                 Case "varchar", "char", "tinytext"
-                    Dim tempField As New JForm.text
+                    Dim tempField As New text
                     If Not IsDBNull(Row("CHARACTER_MAXIMUM_LENGTH")) Then
                         tempField.MaxLength = Row("CHARACTER_MAXIMUM_LENGTH")
                     End If
                     Field = tempField
                     'TODO: Doesn't handel floats and doubles
                 Case "int", "smallint", "mediumint", "bigint"
-                    Field = New JForm.int
+                    Field = New int
                 Case "tinyint"
                     If StrConv(Row("COLUMN_TYPE"), VbStrConv.Lowercase) = "tinyint(1)" Then
-                        Field = New JForm.bool
+                        Field = New bool
                     Else
-                        Dim tempField As New JForm.int
+                        Dim tempField As New int
                         tempField.Size = 5
                         Field = tempField
                     End If
                 Case "text", "mediumtext", "longtext", "blob", "mediumblob", "longblob"
-                    Field = New JForm.textarea
+                    Field = New textarea
                 Case "date", "datetime", "timestamp", "time", "year"
-                    Dim tempField As New JForm.calendar
+                    Dim tempField As New calendar
                     Select Case StrConv(Row("DATA_TYPE"), VbStrConv.Lowercase)
                         Case "datetime", "timestamp"
                             tempField.Format = "%Y-%m-%d %H:%M:%S"
@@ -230,11 +230,11 @@ Public Class JComponentData
                     Field = tempField
                 Case Else
                     'Note: If type can't be determined we give it JField
-                    Field = New JForm.JField
+                    Field = New JField
             End Select
             'Custom field for the 'published' column
             If Row("COLUMN_NAME") = "published" Then
-                Dim PField As New JForm.list
+                Dim PField As New list
                 PField.Label = "JSTATUS"
                 PField.Description = "JFIELD_PUBLISHED_DESC"
                 PField.CSSClass = "chzn-color-state"
@@ -279,31 +279,31 @@ Public Class JComponentData
     End Sub
 
     'Requires JComponentDataTable have been filled by the tasks start method.
-    Protected Friend Sub FillListForm(ByRef Form As JForm.form, ByVal TableAlias As String)
+    Protected Friend Sub FillListForm(ByRef Form As form, ByVal TableAlias As String)
         Dim Fieldset As New JFieldset
         Dim TempJComponentDataTable As DataTable = CType(JComponentDataTable, DataTable)
-        Dim query = _
-                    From FieldData In Table.AsEnumerable() _
-                    Join JComponentData In TempJComponentDataTable.AsEnumerable() _
-                    On FieldData.Field(Of String)("COLUMN_NAME") Equals _
-                            JComponentData.Field(Of String)("Field") _
+        Dim query =
+                    From FieldData In Table.AsEnumerable()
+                    Join JComponentData In TempJComponentDataTable.AsEnumerable()
+                    On FieldData.Field(Of String)("COLUMN_NAME") Equals
+                            JComponentData.Field(Of String)("Field")
                     Where JComponentData.Field(Of Boolean)("Selectable") = True _
                     Or JComponentData.Field(Of Boolean)("Searchable") = True _
                     Or JComponentData.Field(Of Boolean)("ShowInList") = True
-                    Select New With _
-                    { _
-                        .Field = JComponentData.Field(Of String)("Field"), _
-                        .Default = FieldData.Field(Of String)("COLUMN_DEFAULT"), _
-                        .Selectable = JComponentData.Field(Of Boolean)("Selectable"), _
-                        .Searchable = JComponentData.Field(Of Boolean)("Searchable"), _
-                        .ShowInList = JComponentData.Field(Of Boolean)("ShowInList"), _
-                        .Linkable = JComponentData.Field(Of Boolean)("Linkable") _
+                    Select New With
+                    {
+                        .Field = JComponentData.Field(Of String)("Field"),
+                        .Default = FieldData.Field(Of String)("COLUMN_DEFAULT"),
+                        .Selectable = JComponentData.Field(Of Boolean)("Selectable"),
+                        .Searchable = JComponentData.Field(Of Boolean)("Searchable"),
+                        .ShowInList = JComponentData.Field(Of Boolean)("ShowInList"),
+                        .Linkable = JComponentData.Field(Of Boolean)("Linkable")
                     }
 
         Fieldset.Name = "filters"
         For Each Row In query
             If Row.Selectable = True Then
-                Dim Field As New JForm.sql
+                Dim Field As New sql
                 Field.Name = Row.Field
                 Field.KeyField = Row.Field
                 Field.ValueField = Row.Field
@@ -321,7 +321,7 @@ Public Class JComponentData
 
         Dim AFieldset As New JFieldset
         AFieldset.Name = "Rest"
-        Dim AField As New JForm.list
+        Dim AField As New list
         AField.Name = "search_filter"
         AField.CSSClass = "inputbox"
         Dim SearchOptions As New List(Of JOption)
@@ -343,7 +343,7 @@ Public Class JComponentData
         ColumnFieldset.Name = "columns"
         For Each Row In query
             If Row.ShowInList = True Then
-                Dim Field As New JForm.column
+                Dim Field As New column
                 Field.Name = Row.Field
                 Field.ReadOnlyField = True
                 Field.CSSClass = "center"

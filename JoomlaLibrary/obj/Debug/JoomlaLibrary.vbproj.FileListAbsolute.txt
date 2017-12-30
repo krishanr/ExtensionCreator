@@ -2,12 +2,9 @@ C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\JoomlaLi
 C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\JoomlaLibrary.pdb
 C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\JoomlaLibrary.xml
 C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\ExtensionCreator.dll
-C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\JForm.exe
 C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\JoomlaGUI.exe
 C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\ExtensionCreator.pdb
 C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\ExtensionCreator.xml
-C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\JForm.pdb
-C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\JForm.xml
 C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\JoomlaGUI.pdb
 C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\JoomlaGUI.xml
 C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\JoomlaLibrary\obj\Debug\JoomlaLibrary.vbprojResolveAssemblyReference.cache
@@ -25,4 +22,4 @@ C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLi
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\Irony.Samples.pdb
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\Irony.Interpreter.pdb
 C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\Ionic.Zip.dll
-C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\JForm.exe.config
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibrary\obj\Debug\JoomlaLibrary.frmJForm.resources

@@ -15,13 +15,10 @@ C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\Extensio
 C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\obj\Debug\ExtensionCreatorGUI.pdb
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\JoomlaLibrary.dll
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\JoomlaGUI.exe
-C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\JForm.exe
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\JoomlaLibrary.pdb
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\JoomlaLibrary.xml
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\JoomlaGUI.pdb
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\JoomlaGUI.xml
-C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\JForm.pdb
-C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\JForm.xml
 C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\obj\Debug\ExtensionCreatorGUI.frmRenderedOutput.resources
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\Mono.TextTemplating.dll
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\Mono.TextTemplating.pdb
@@ -32,4 +29,3 @@ C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\Extensio
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\Irony.Samples.pdb
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\Irony.Interpreter.pdb
 C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\Ionic.Zip.dll
-C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\JForm.exe.config

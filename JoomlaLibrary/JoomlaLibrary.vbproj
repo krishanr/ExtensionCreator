@@ -52,11 +52,13 @@
     <Reference Include="Irony">
       <HintPath>..\..\Irony_2013_12_12\Irony.Samples\bin\Debug\Irony.dll</HintPath>
     </Reference>
-    <Reference Include="Irony.Samples">
-      <HintPath>..\..\Irony_2013_12_12\Irony.Samples\bin\Debug\Irony.Samples.dll</HintPath>
+    <Reference Include="Irony.Samples, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fcfa0ac1c89a471c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExtensionCreatorGUI\bin\Debug\Irony.Samples.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -75,9 +77,29 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExtraFields.vb" />
+    <Compile Include="fields.vb" />
+    <Compile Include="form.vb" />
+    <Compile Include="frmJForm.Designer.vb">
+      <DependentUpon>frmJForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmJForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="JComponent.vb" />
     <Compile Include="JComponentData.vb" />
     <Compile Include="JExtension.vb" />
+    <Compile Include="JField.vb" />
+    <Compile Include="JFieldset.vb" />
+    <Compile Include="JFormDataSet.Designer.vb">
+      <DependentUpon>JFormDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="JFormDataSet.vb">
+      <DependentUpon>JFormDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JOption.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -95,6 +117,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmJForm.resx">
+      <DependentUpon>frmJForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -103,6 +128,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="JFormDataSet.xsc">
+      <DependentUpon>JFormDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JFormDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JFormDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JFormDataSet.xss">
+      <DependentUpon>JFormDataSet.xsd</DependentUpon>
+    </None>
     <None Include="JoomlaLibrary.pfx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -123,10 +159,10 @@
       <Project>{2f935f90-c8ad-455c-b202-91af65037fe1}</Project>
       <Name>ExtensionCreator</Name>
     </ProjectReference>
-    <ProjectReference Include="..\JForm\JForm.vbproj">
-      <Project>{152806ae-f197-4fcc-91dc-eaf2bbf577f3}</Project>
-      <Name>JForm</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\dataType.xml" />
+    <Content Include="Resources\type.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

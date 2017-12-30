@@ -266,16 +266,16 @@ Public Class JExtension
             End If
 
             If Not Forms.Contains(FileName) Then
-                'Forms.Add(FileName, New JForm.form)
+                'Forms.Add(FileName, New form)
                 Throw New Exception("The form was not loaded, please make sure AddParam is called after the appropriate form was processed.")
             End If
 
-            Dim Form As JForm.form = Forms.Item(FileName)
+            Dim Form As form = Forms.Item(FileName)
 
-            Dim Fieldsets As IEnumerable(Of JForm.JFieldset) = From item In Form.FieldSets _
-                                                               Where item.Name = FieldSetName _
-                                                               Select item
-            Dim FieldSet As JForm.JFieldset
+            Dim Fieldsets As IEnumerable(Of JFieldset) = From item In Form.FieldSets
+                                                         Where item.Name = FieldSetName
+                                                         Select item
+            Dim FieldSet As JFieldset
             If Fieldsets.Count = 0 Then
                 FieldSet = New JFieldset
                 FieldSet.Name = FieldSetName
@@ -285,7 +285,7 @@ Public Class JExtension
             End If
 
             'TODO: optional. should store the fields in the fieldsets as a better ordered list...
-            Dim AField As JForm.JField
+            Dim AField As JField
             If FieldSet.Fields.Count > 0 Then
                 AField = (From item In FieldSet.Fields _
                           Where item.Name = FieldName
@@ -295,7 +295,7 @@ Public Class JExtension
             End If
 
             If AField Is Nothing Then
-                Dim myField As JForm.JField = Activator.CreateInstance("JForm", "JForm." & FieldType).Unwrap
+                Dim myField As JField = CType(Activator.CreateInstance(Type.GetType("JoomlaLibrary." & FieldType)), JField)
                 myField.Name = FieldName
                 myField.DefaultValue = FieldValue
                 myField.Description = Description
@@ -395,7 +395,7 @@ Public Class JExtension
 
         'Load in any forms so fields can be added on demand.
         If FileNode.Attribute(ContainsFormAttribute) IsNot Nothing Then
-            Dim myForm As New JForm.form
+            Dim myForm As New form
             myForm.Load(AbsFilePath)
             Forms.Add(RelFilePath, myForm)
         End If
@@ -580,7 +580,7 @@ Public Class JExtension
                 RelFormFilePath = CStr(FormEntry.Key)
                 AbsFormFilePath = WorkingFolder & RelFormFilePath
 
-                Dim myForm As JForm.form = FormEntry.Value
+                Dim myForm As form = FormEntry.Value
                 Dim SaveMethod As Integer
 
                 'Should always get a result since Forms is populated using these XElements.
@@ -591,7 +591,7 @@ Public Class JExtension
                 If FormElem.Attribute(FormSaveAttribute) IsNot Nothing Then
                     SaveMethod = Val(FormElem.Attribute(FormSaveAttribute).Value)
                 Else
-                    SaveMethod = JForm.form.SaveMethod.Context
+                    SaveMethod = form.SaveMethod.Context
                 End If
                 'myForm.Load(AbsFormFilePath, True)
                 myForm.Save(SaveMethod, AbsFormFilePath)
