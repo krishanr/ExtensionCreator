@@ -22,4 +22,6 @@ C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLi
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\Irony.Samples.pdb
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\Irony.Interpreter.pdb
 C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\Ionic.Zip.dll
-C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibrary\obj\Debug\JoomlaLibrary.frmJForm.resources
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\JoomlaForm.dll
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\JoomlaForm.pdb
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibrary\bin\Debug\JoomlaForm.xml

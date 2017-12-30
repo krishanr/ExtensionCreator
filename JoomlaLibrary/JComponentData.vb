@@ -2,7 +2,7 @@
 Imports Irony.Samples
 Imports Irony.Parsing
 Imports System.IO
-Imports JForm
+Imports JoomlaForm
 Imports JoomlaGUI
 
 Public Class JComponentData

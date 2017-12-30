@@ -1,6 +1,6 @@
 ﻿Imports System.Xml
 Imports System.IO
-Imports JForm
+Imports JoomlaForm
 Imports ExtensionCreator
 Imports JoomlaGUI
 Imports System.Windows.Forms

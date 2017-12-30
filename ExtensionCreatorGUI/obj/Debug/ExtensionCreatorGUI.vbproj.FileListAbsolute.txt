@@ -29,3 +29,6 @@ C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\Extensio
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\Irony.Samples.pdb
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\Irony.Interpreter.pdb
 C:\Users\Krishan\documents\visual studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\Ionic.Zip.dll
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\JoomlaForm.dll
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\JoomlaForm.pdb
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreatorGUI\bin\Debug\JoomlaForm.xml

@@ -3,7 +3,7 @@ Imports System.IO
 Imports System.Xml
 Imports System.Collections.ObjectModel
 Imports System.Collections.Specialized
-Imports JForm
+Imports JoomlaForm
 Imports System.Windows.Forms
 Imports System.Xml.XPath
 Imports System.Text.RegularExpressions
@@ -215,15 +215,17 @@ Public Class JExtension
             ElseIf _myForm.showDialogEnabled Then
                 'TODO: (optional) maybe put this in an event log..., this is unusual
             Else
-                'Show dialog is not enabled, so just return true.
-                result = True
+                'Show dialog is not enabled.
             End If
         Catch ex As Exception
             'Very unusual, show a message, then move on.
             MsgBox(ex.Message, MsgBoxStyle.Exclamation, "Jform Error")
         Finally
-            'Save loaded form
-            _myForm.Save()
+            'Save loaded form, manually since show dialog is disabled.
+            If Not _myForm.showDialogEnabled Then
+                _myForm.Save()
+                result = True
+            End If
             _myForm.Dispose()
         End Try
         _myForm = Nothing
@@ -270,7 +272,7 @@ Public Class JExtension
                 Throw New Exception("The form was not loaded, please make sure AddParam is called after the appropriate form was processed.")
             End If
 
-            Dim Form As form = Forms.Item(FileName)
+            Dim Form As JoomlaForm.form = Forms.Item(FileName)
 
             Dim Fieldsets As IEnumerable(Of JFieldset) = From item In Form.FieldSets
                                                          Where item.Name = FieldSetName
@@ -295,7 +297,7 @@ Public Class JExtension
             End If
 
             If AField Is Nothing Then
-                Dim myField As JField = CType(Activator.CreateInstance(Type.GetType("JoomlaLibrary." & FieldType)), JField)
+                Dim myField As JField = Activator.CreateInstance("JoomlaForm", "JoomlaForm." & FieldType).Unwrap
                 myField.Name = FieldName
                 myField.DefaultValue = FieldValue
                 myField.Description = Description
@@ -395,7 +397,7 @@ Public Class JExtension
 
         'Load in any forms so fields can be added on demand.
         If FileNode.Attribute(ContainsFormAttribute) IsNot Nothing Then
-            Dim myForm As New form
+            Dim myForm As New JoomlaForm.form
             myForm.Load(AbsFilePath)
             Forms.Add(RelFilePath, myForm)
         End If
@@ -580,7 +582,7 @@ Public Class JExtension
                 RelFormFilePath = CStr(FormEntry.Key)
                 AbsFormFilePath = WorkingFolder & RelFormFilePath
 
-                Dim myForm As form = FormEntry.Value
+                Dim myForm As JoomlaForm.form = FormEntry.Value
                 Dim SaveMethod As Integer
 
                 'Should always get a result since Forms is populated using these XElements.
@@ -591,7 +593,7 @@ Public Class JExtension
                 If FormElem.Attribute(FormSaveAttribute) IsNot Nothing Then
                     SaveMethod = Val(FormElem.Attribute(FormSaveAttribute).Value)
                 Else
-                    SaveMethod = form.SaveMethod.Context
+                    SaveMethod = JoomlaForm.form.SaveMethod.Context
                 End If
                 'myForm.Load(AbsFormFilePath, True)
                 myForm.Save(SaveMethod, AbsFormFilePath)
