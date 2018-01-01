@@ -8,6 +8,7 @@ Imports System.Windows.Forms
 Imports System.Xml.XPath
 Imports System.Text.RegularExpressions
 Imports System.Reflection
+Imports System.Reflection.Assembly
 
 'TTODO: Make this an abstract class
 Public Class JExtension
@@ -189,7 +190,7 @@ Public Class JExtension
     Private _myForm As frmJForm
     'Should be called after the file has been rendered. i.e. requires a valid xml file.
     Public Sub OpenJForm(ByVal FileNode As XElement, ByVal AbsFilePath As String)
-        _myForm = New frmJForm
+        _myForm = GetJForm()
         If FileNode.Attribute(FormTitleAttribute) IsNot Nothing Then _myForm.Text = FileNode.Attribute(FormTitleAttribute).Value
         If FileNode.Attribute(FormSaveAttribute) IsNot Nothing Then _myForm.SaveMethod = Val(FileNode.Attribute(FormSaveAttribute).Value)
 
@@ -205,6 +206,35 @@ Public Class JExtension
         'Open the JForm from the GUI thread
         OnInteractUser(AddressOf JFormShowDialog)
     End Sub
+
+    Private _frmJFormType As Type = Nothing
+    'This function loads the frmJFormEditor editor from JForm.exe if JForm.exe
+    'is included in the currenty executing path.
+    Protected Function GetJForm() As frmJForm
+
+        If _frmJFormType IsNot Nothing Then
+            Return CType(Activator.CreateInstance(_frmJFormType), frmJForm)
+        End If
+        Dim JFormAssemblyPath As String = My.Application.Info.DirectoryPath & "\JForm.exe"
+        Dim myAssembly As [Assembly]
+
+        If File.Exists(JFormAssemblyPath) Then
+            myAssembly = [Assembly].LoadFrom(JFormAssemblyPath)
+
+            Dim myTypes As System.Type() = myAssembly.GetTypes()
+            For Each singleType In myTypes
+                If GetType(frmJForm).IsAssignableFrom(singleType) And singleType.Name = "frmJFormEditor" Then
+                    'Save this result for the next use
+                    _frmJFormType = singleType
+                    Return CType(Activator.CreateInstance(singleType), frmJForm)
+                    Exit For
+                End If
+            Next
+        End If
+
+        'If no extensions were found, return the default form.
+        Return New frmJForm
+    End Function
 
     'Requires private myForm variable to be initialized
     Protected Function JFormShowDialog()

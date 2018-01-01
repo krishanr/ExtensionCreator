@@ -9,9 +9,16 @@ Public Class frmJForm
     Private _saveMethod As Integer = Form.SaveMethod.Context
     Private _firstSelection As Boolean = True
     'Tells users of this form that it doesn't have a show dialog option.
-    Public ReadOnly showDialogEnabled As Boolean = False
+    Protected _showDialogEnabled As Boolean = False
 
 #Region "Properties"
+
+    Public ReadOnly Property showDialogEnabled As Boolean
+        Get
+            Return _showDialogEnabled
+        End Get
+    End Property
+
 
     Public Property SaveMethod() As Integer
         Get
@@ -42,25 +49,18 @@ Public Class frmJForm
 
 #End Region
 
-    Public Sub LoadForm(ByVal FileName As String)
+    Public Overridable Sub LoadForm(ByVal FileName As String)
         Form.Load(FileName)
-        FormFileDialog.InitialDirectory = GetDirectoryName(FileName)
     End Sub
 
-    Public Sub Save()
-        'TODO: add ex handling
+    Public Overridable Sub Save()
         If OutputFileName = "" Then
-            If FormFileDialog.ShowDialog = System.Windows.Forms.DialogResult.OK Then
-                OutputFileName = FormFileDialog.FileName
-            Else
-                MsgBox("Cannot save the form unless an xml file is chosen to save to.", MsgBoxStyle.Information)
-                Exit Sub
-            End If
+            'TODO: add ex handling
         End If
         'TODO: add a NULL save method enum to form..
         If SaveMethod = 0 Then
             'If the save method is not set, just save it as a form.
-            SaveMethod = Form.SaveMethod.Form
+            SaveMethod = form.SaveMethod.Form
         End If
         Form.Save(SaveMethod, OutputFileName)
     End Sub
