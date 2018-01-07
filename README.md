@@ -25,7 +25,7 @@ After installing the application, the "Extension Creator" folder will be created
 The program will work with the above files by default, and put the generated files in the _Output_ folder. After a Joomla extension is run, an installable ZIP file will be created in the _Archives_ folder.
 
 ## License 
-* see [LICENSE](https://github.com/k2rajara/ExtensionCreator/blob/OpenSource/LICENSE.txt) file
+* see [LICENSE](https://github.com/k2rajara/ExtensionCreator/blob/OpenSource/license.txt) file
 
 ## Version 
 * Version 0.5
