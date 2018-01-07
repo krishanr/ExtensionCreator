@@ -11,8 +11,7 @@ ExtensionCreator is a general purpose Windows application designed to help reduc
 This application was originally designed to create boiler plate code for Joomla components, modules and plugins, but was designed abstractly to be useful for similar problems. As a component creator for Joomla, this software has the following advantages:
 * Creates a functioning Joomla component.
 * Can create an editable administrator table, or form in the front end, from a MySql table.
-* Existing code template files could be edited and new ones could be created and used based on custom requirements.
-* Comes with a JForm editor for editing JForm xml files.
+* Existing code template files could be edited and new ones could be created based on custom requirements.
 
 ## Download
 * [Version 0.5](https://github.com/k2rajara/ExtensionCreator/releases/download/v0.2-alpha/setup.exe)
