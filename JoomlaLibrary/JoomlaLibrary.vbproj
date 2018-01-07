@@ -49,12 +49,13 @@
     <AssemblyOriginatorKeyFile>JoomlaLibrary.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Irony">
-      <HintPath>..\..\Irony_2013_12_12\Irony.Samples\bin\Debug\Irony.dll</HintPath>
+    <Reference Include="Irony, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ca48ace7223ead47, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Irony.dll</HintPath>
     </Reference>
     <Reference Include="Irony.Samples, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fcfa0ac1c89a471c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ExtensionCreatorGUI\bin\Debug\Irony.Samples.dll</HintPath>
+      <HintPath>..\Libraries\Irony.Samples.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

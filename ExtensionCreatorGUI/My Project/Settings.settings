@@ -20,12 +20,12 @@
     <Setting Name="ExtensionXmlFiles" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;string&gt;TemplateManifests/classicautos.xml&lt;/string&gt;
-  &lt;string&gt;TemplateManifests/component.xml&lt;/string&gt;
-  &lt;string&gt;TemplateManifests/module.xml&lt;/string&gt;
-  &lt;string&gt;TemplateManifests/plugin.xml&lt;/string&gt;
-  &lt;string&gt;TemplateManifests/library.xml&lt;/string&gt;
-  &lt;string&gt;TemplateManifests/basic/basic.xml&lt;/string&gt;
+  &lt;string&gt;../../../TemplateManifests/classicautos.xml&lt;/string&gt;
+  &lt;string&gt;../../../TemplateManifests/component.xml&lt;/string&gt;
+  &lt;string&gt;../../../TemplateManifests/module.xml&lt;/string&gt;
+  &lt;string&gt;../../../TemplateManifests/plugin.xml&lt;/string&gt;
+  &lt;string&gt;../../../TemplateManifests/library.xml&lt;/string&gt;
+  &lt;string&gt;../../../TemplateManifests/basic/basic.xml&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
     </Setting>
   </Settings>

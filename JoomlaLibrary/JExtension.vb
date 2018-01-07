@@ -309,8 +309,9 @@ Public Class JExtension
                                                          Select item
             Dim FieldSet As JFieldset
             If Fieldsets.Count = 0 Then
-                FieldSet = New JFieldset
-                FieldSet.Name = FieldSetName
+                FieldSet = New JFieldset With {
+                    .Name = FieldSetName
+                }
                 Form.FieldSets.Add(FieldSet)
             Else
                 FieldSet = Fieldsets.First
@@ -455,7 +456,7 @@ Public Class JExtension
         'Dim Params As XElement = InstallXmlDoc.XPathSelectElement("//params")
         Dim FirstParamSet As Boolean = True
         Dim ParamSets As IEnumerable(Of XElement) = InstallXmlDoc.XPathSelectElements("//params")
-        Dim Config As XElement
+        Dim Config As XElement = Nothing
 
         If ParamSets IsNot Nothing Then
             For Each Params As XElement In ParamSets
@@ -589,10 +590,12 @@ Public Class JExtension
     'Overwrites OutputFileName with a formatted version of XmlDoc, make sure OutputFileName 
     'is a valid file.
     Public Sub SaveXmlDoc(ByVal XmlDoc As XmlDocument, ByVal OutputFileName As String)
-        Dim XmlWriterSettings As New XmlWriterSettings
-        XmlWriterSettings.Indent = True
-        XmlWriterSettings.IndentChars = (ControlChars.Tab)
-        XmlWriterSettings.NewLineOnAttributes = True
+        Dim XmlWriterSettings As New XmlWriterSettings With {
+            .Indent = True,
+            .IndentChars = (ControlChars.Tab),
+            .NewLineOnAttributes = True
+        }
+
         Using XmlWriter As XmlWriter = XmlWriter.Create(OutputFileName, XmlWriterSettings)
             XmlDoc.Save(XmlWriter)
         End Using

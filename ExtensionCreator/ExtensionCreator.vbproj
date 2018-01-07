@@ -49,12 +49,13 @@
     <AssemblyOriginatorKeyFile>ExtensionCreator.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Ionic.Zip">
-      <HintPath>..\..\..\..\Visual Studio 2010\Projects\DotNetZipLib-DevKit-v1.9\zip-v1.9\Release\Ionic.Zip.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.TextTemplating, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\TextTemplating\Mono.TextTemplating\obj\Debug\Mono.TextTemplating.dll</HintPath>
+      <HintPath>..\Libraries\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.TextTemplating, Version=0.0.0.0, Culture=neutral, PublicKeyToken=faa404f22688ecf6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\Mono.TextTemplating.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

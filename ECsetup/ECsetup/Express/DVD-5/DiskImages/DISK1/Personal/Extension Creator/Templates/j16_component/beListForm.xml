@@ -1,3 +1,0 @@
-<#@ template inherits="ETemplate" language="VB" #>
-<# Dim JExt as JExtension = CType(Ext, JExtension) #>
-<#= JExt.CreateForm(JExt.GetActiveTaskCollection().Item("TaskName") & " List Form", 1, "ListForm") #>

@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_042E360191B7539ABA0E523E3199F7AF"
+        "OwnerKey" = "8:_CE4224D17AC244708009F2B60C37FF89"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_051006A883A745E5959EC627484B2AD8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -63,20 +69,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_110FB3B2F3394022969E6BB6C299709D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_1163695760854DEEBE6478EA48FC676D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_137F3CE7006A41F3B34E618FDE34A7C6"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_14BF0A51FADF5DB63F004782207092C6"
+        "OwnerKey" = "8:_CE4224D17AC244708009F2B60C37FF89"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -154,13 +154,19 @@
         "Entry"
         {
         "MsmKey" = "8:_359582E288D2BD3A8BCAAEF8C38EE962"
-        "OwnerKey" = "8:_110FB3B2F3394022969E6BB6C299709D"
+        "OwnerKey" = "8:_4CDD9234E50640F2BBA48C9120BCFE93"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_359582E288D2BD3A8BCAAEF8C38EE962"
-        "OwnerKey" = "8:_4CDD9234E50640F2BBA48C9120BCFE93"
+        "OwnerKey" = "8:_CE4224D17AC244708009F2B60C37FF89"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_35C2416B873D431391BFC7B777278778"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -183,6 +189,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_38FE81E1DC764C6096DA4B943975E44F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_3A48F7347256472CB60767B06E508CDF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -197,12 +209,6 @@
         {
         "MsmKey" = "8:_3AAD9A4DC293462984848D3FE81F825A"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_3D7FFB3C9774E372DE06496EC00FE120"
-        "OwnerKey" = "8:_110FB3B2F3394022969E6BB6C299709D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -249,12 +255,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_4CE37739F5E54FCC9BEEC6B4A7DECEE6"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_4DADE2834FDA405986991FD83DBDCBE1"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -262,6 +262,12 @@
         "Entry"
         {
         "MsmKey" = "8:_50259246232D4109895B87387D18F6BC"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_51E3492F2EFE4E1F9154E1B25917BD5E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -297,6 +303,24 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_5EEC4B66C099CCD75D0F182AA93D6716"
+        "OwnerKey" = "8:_CE4224D17AC244708009F2B60C37FF89"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5EEC4B66C099CCD75D0F182AA93D6716"
+        "OwnerKey" = "8:_FE13D6C111F3A7C6E06E41805CD37A84"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5EEC4B66C099CCD75D0F182AA93D6716"
+        "OwnerKey" = "8:_14BF0A51FADF5DB63F004782207092C6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_5FFD49094151455DB0FD963C39523537"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -317,12 +341,6 @@
         {
         "MsmKey" = "8:_61AF92B71D23455DA02E16A629377066"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_63661AB7875435D59AEC1879BD441AC8"
-        "OwnerKey" = "8:_9DE5B9A92054C0AC173D20649CF87EAE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -399,6 +417,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_7EE817DC045642D88FE03A03D85EC9AB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_80FC7CABA5764CFD8EF9200887856860"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -465,12 +489,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_953DE228F7DD4D2FBDFEE630EFEB34C2"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_95663EB4325C4E82B58EBDD7DBC770CF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -507,20 +525,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9DE5B9A92054C0AC173D20649CF87EAE"
-        "OwnerKey" = "8:_110FB3B2F3394022969E6BB6C299709D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_9F7F9A5D6E75470CA52CAE636B0A0FFF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_A06DE7538FA9F563E55E278EE744881F"
-        "OwnerKey" = "8:_110FB3B2F3394022969E6BB6C299709D"
+        "MsmKey" = "8:_9FAA6A1CDD8144B98CCFB5E532A44C74"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -615,6 +627,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_C0E620E4F279B664670C92E7064542DA"
+        "OwnerKey" = "8:_CE4224D17AC244708009F2B60C37FF89"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_C1232BFD62554FC0A759CB8421A119D8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -634,6 +652,12 @@
         "Entry"
         {
         "MsmKey" = "8:_CD91012BC612412CA6B6AD68247DCFC6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CE4224D17AC244708009F2B60C37FF89"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -664,6 +688,12 @@
         "Entry"
         {
         "MsmKey" = "8:_D82C944EFCCA49AC881464FD0DEDFECA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D84E03D240194E7F9D7E9540CA66D566"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -711,7 +741,19 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_E816E204988F40B4A5B7647D6A875EF5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E87108CE995041D5B645AF312155EB15"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E8EC80D3764A4CC6964796199983AA35"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -736,12 +778,6 @@
         "Entry"
         {
         "MsmKey" = "8:_ED9E449655394CA69996CF1BC4469906"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F02E9636AC914C64BB3C4EE4DD728FF7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -795,24 +831,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_F7441A0A59F2A49C937A7B06B652229A"
-        "OwnerKey" = "8:_110FB3B2F3394022969E6BB6C299709D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F7441A0A59F2A49C937A7B06B652229A"
-        "OwnerKey" = "8:_63661AB7875435D59AEC1879BD441AC8"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_F7441A0A59F2A49C937A7B06B652229A"
-        "OwnerKey" = "8:_9DE5B9A92054C0AC173D20649CF87EAE"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_F7500C9052E2429EA5759C27FAAD4B1F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -849,6 +867,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_FE13D6C111F3A7C6E06E41805CD37A84"
+        "OwnerKey" = "8:_14BF0A51FADF5DB63F004782207092C6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_4CDD9234E50640F2BBA48C9120BCFE93"
         "MsmSig" = "8:_UNDEFINED"
@@ -856,37 +880,37 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_110FB3B2F3394022969E6BB6C299709D"
+        "OwnerKey" = "8:_CE4224D17AC244708009F2B60C37FF89"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3D7FFB3C9774E372DE06496EC00FE120"
+        "OwnerKey" = "8:_C0E620E4F279B664670C92E7064542DA"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A06DE7538FA9F563E55E278EE744881F"
+        "OwnerKey" = "8:_042E360191B7539ABA0E523E3199F7AF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9DE5B9A92054C0AC173D20649CF87EAE"
+        "OwnerKey" = "8:_14BF0A51FADF5DB63F004782207092C6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_63661AB7875435D59AEC1879BD441AC8"
+        "OwnerKey" = "8:_FE13D6C111F3A7C6E06E41805CD37A84"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F7441A0A59F2A49C937A7B06B652229A"
+        "OwnerKey" = "8:_5EEC4B66C099CCD75D0F182AA93D6716"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -951,7 +975,7 @@
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
-        "Compression" = "3:2"
+        "Compression" = "3:1"
         "SignOutput" = "11:FALSE"
         "CertificateFile" = "8:"
         "PrivateKeyFile" = "8:"
@@ -979,7 +1003,7 @@
     {
         "CustomAction"
         {
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_52F91E82EF5E468EA2614E04D2CC7A0C"
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_20222577226B49C8A9DD49DDB9004292"
             {
             "Name" = "8:ExtensionCreatorGUI.exe"
             "Condition" = "8:"
@@ -989,7 +1013,7 @@
             "Arguments" = "8:-i"
             "EntryPoint" = "8:"
             "Sequence" = "3:1"
-            "Identifier" = "8:_3963F681_11BE_4D08_9560_9599A521B2B0"
+            "Identifier" = "8:_D8ECA1E3_58B3_434C_AEEA_F0FF01587C09"
             "InstallerClass" = "11:FALSE"
             "CustomActionData" = "8:"
             }
@@ -1016,6 +1040,37 @@
         }
         "File"
         {
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_042E360191B7539ABA0E523E3199F7AF"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:JoomlaForm, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5ea6d05c4dd86173, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_042E360191B7539ABA0E523E3199F7AF"
+                    {
+                    "Name" = "8:JoomlaForm.DLL"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:JoomlaForm.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_8AE7FBFC7E7644B6BCA7284D26CB6812"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_051006A883A745E5959EC627484B2AD8"
             {
             "SourcePath" = "8:..\\ExtensionCreatorGUI\\bin\\Release\\Templates\\j3.x_component\\beControllerList.php"
@@ -1176,37 +1231,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_110FB3B2F3394022969E6BB6C299709D"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:JoomlaLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=49f1939ce416a990, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_110FB3B2F3394022969E6BB6C299709D"
-                    {
-                    "Name" = "8:JoomlaLibrary.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\ExtensionCreatorGUI\\bin\\Release\\JoomlaLibrary.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_8AE7FBFC7E7644B6BCA7284D26CB6812"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1163695760854DEEBE6478EA48FC676D"
             {
             "SourcePath" = "8:..\\ExtensionCreatorGUI\\bin\\Release\\TemplateManifests\\joomla\\plugin.xml"
@@ -1227,12 +1251,23 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_137F3CE7006A41F3B34E618FDE34A7C6"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_14BF0A51FADF5DB63F004782207092C6"
             {
-            "SourcePath" = "8:..\\ExtensionCreatorGUI\\bin\\Release\\Templates\\j3.x_component\\beListForm.xml"
-            "TargetName" = "8:beListForm.xml"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Irony.Samples, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fcfa0ac1c89a471c, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_14BF0A51FADF5DB63F004782207092C6"
+                    {
+                    "Name" = "8:Irony.Samples.DLL"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Irony.Samples.DLL"
+            "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_D149D55120564D7BA826BEDCFA407F7C"
+            "Folder" = "8:_8AE7FBFC7E7644B6BCA7284D26CB6812"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1244,7 +1279,7 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_162AC5B35A724546B5AB29E1376DDD3A"
@@ -1518,6 +1553,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_35C2416B873D431391BFC7B777278778"
+            {
+            "SourcePath" = "8:..\\licenses\\license_Mono.TextTemplating.txt"
+            "TargetName" = "8:license_Mono.TextTemplating.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_A4142877989A4170A0D22BAECFCD3687"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_362F4DDA9A9A4A59AF92DD5168ECDDE7"
             {
             "SourcePath" = "8:..\\ExtensionCreatorGUI\\bin\\Release\\Templates\\j3.x_component\\FeFormTmplSuccess.php"
@@ -1564,6 +1619,26 @@
             "TargetName" = "8:beDataGridView.php"
             "Tag" = "8:"
             "Folder" = "8:_D149D55120564D7BA826BEDCFA407F7C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_38FE81E1DC764C6096DA4B943975E44F"
+            {
+            "SourcePath" = "8:..\\license.txt"
+            "TargetName" = "8:license.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_8AE7FBFC7E7644B6BCA7284D26CB6812"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1636,37 +1711,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3D7FFB3C9774E372DE06496EC00FE120"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:JoomlaGUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=be4395d1ccad9989, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_3D7FFB3C9774E372DE06496EC00FE120"
-                    {
-                    "Name" = "8:JoomlaGUI.EXE"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:JoomlaGUI.EXE"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_8AE7FBFC7E7644B6BCA7284D26CB6812"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3E092F0D453F4793A18ADB92D5A2B656"
@@ -1793,7 +1837,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ExtensionCreatorGUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e962111453d3efeb, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:ExtensionCreatorGUI, Version=1.0.1.0, Culture=neutral, PublicKeyToken=e962111453d3efeb, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_4CDD9234E50640F2BBA48C9120BCFE93"
@@ -1806,26 +1850,6 @@
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_8AE7FBFC7E7644B6BCA7284D26CB6812"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4CE37739F5E54FCC9BEEC6B4A7DECEE6"
-            {
-            "SourcePath" = "8:..\\ExtensionCreatorGUI\\bin\\Release\\Templates\\j3.x_component\\EditForm.xml"
-            "TargetName" = "8:EditForm.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_D149D55120564D7BA826BEDCFA407F7C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1866,6 +1890,26 @@
             "TargetName" = "8:plugin.xml"
             "Tag" = "8:"
             "Folder" = "8:_BF87F4391D774FF8AE682502AE35174A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_51E3492F2EFE4E1F9154E1B25917BD5E"
+            {
+            "SourcePath" = "8:..\\ExtensionCreatorGUI\\bin\\Release\\TemplateManifests\\joomla\\module_files.xml"
+            "TargetName" = "8:module_files.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_528DE15CBBEC4C14B5E882C3A58CAE76"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1980,6 +2024,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5EEC4B66C099CCD75D0F182AA93D6716"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Irony, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ca48ace7223ead47, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_5EEC4B66C099CCD75D0F182AA93D6716"
+                    {
+                    "Name" = "8:Irony.DLL"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Irony.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_8AE7FBFC7E7644B6BCA7284D26CB6812"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5FFD49094151455DB0FD963C39523537"
             {
             "SourcePath" = "8:..\\ExtensionCreatorGUI\\bin\\Release\\Templates\\j16_plugin\\langFile.ini"
@@ -2058,37 +2133,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_63661AB7875435D59AEC1879BD441AC8"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Irony.Interpreter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ca48ace7223ead47, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_63661AB7875435D59AEC1879BD441AC8"
-                    {
-                    "Name" = "8:Irony.Interpreter.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Irony.Interpreter.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_8AE7FBFC7E7644B6BCA7284D26CB6812"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_65F37F21251142D8B8DEEA64BE9ED1E2"
@@ -2331,6 +2375,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7EE817DC045642D88FE03A03D85EC9AB"
+            {
+            "SourcePath" = "8:..\\ExtensionCreatorGUI\\bin\\Release\\TemplateManifests\\joomla\\library_files.xml"
+            "TargetName" = "8:library_files.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_528DE15CBBEC4C14B5E882C3A58CAE76"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_80FC7CABA5764CFD8EF9200887856860"
             {
             "SourcePath" = "8:..\\ExtensionCreatorGUI\\bin\\Release\\Templates\\j16_component\\feEntryPoint.php"
@@ -2551,26 +2615,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_953DE228F7DD4D2FBDFEE630EFEB34C2"
-            {
-            "SourcePath" = "8:..\\ExtensionCreatorGUI\\bin\\Release\\Templates\\j16_component\\EditForm.xml"
-            "TargetName" = "8:EditForm.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_128EBA9299D64B1A8C57B1FF0FDBBCAC"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_95663EB4325C4E82B58EBDD7DBC770CF"
             {
             "SourcePath" = "8:..\\ExtensionCreatorGUI\\bin\\Release\\Templates\\j16_component\\feFormView.php"
@@ -2691,37 +2735,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9DE5B9A92054C0AC173D20649CF87EAE"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Irony.Samples, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fcfa0ac1c89a471c, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_9DE5B9A92054C0AC173D20649CF87EAE"
-                    {
-                    "Name" = "8:Irony.Samples.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Irony.Samples.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_8AE7FBFC7E7644B6BCA7284D26CB6812"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9F7F9A5D6E75470CA52CAE636B0A0FFF"
             {
             "SourcePath" = "8:..\\ExtensionCreatorGUI\\bin\\Release\\Templates\\j3.x_component\\feFormJS.js"
@@ -2742,23 +2755,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A06DE7538FA9F563E55E278EE744881F"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9FAA6A1CDD8144B98CCFB5E532A44C74"
             {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:JForm, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f599dc587ef1d791, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_A06DE7538FA9F563E55E278EE744881F"
-                    {
-                    "Name" = "8:JForm.EXE"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:JForm.EXE"
-            "TargetName" = "8:"
+            "SourcePath" = "8:..\\licenses\\license_irony.txt"
+            "TargetName" = "8:license_irony.txt"
             "Tag" = "8:"
-            "Folder" = "8:_8AE7FBFC7E7644B6BCA7284D26CB6812"
+            "Folder" = "8:_A4142877989A4170A0D22BAECFCD3687"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2770,7 +2772,7 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A0D81F559E824D8FBF3729FC26AA50AA"
@@ -3084,6 +3086,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C0E620E4F279B664670C92E7064542DA"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:JoomlaGUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=be4395d1ccad9989, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_C0E620E4F279B664670C92E7064542DA"
+                    {
+                    "Name" = "8:JoomlaGUI.EXE"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:JoomlaGUI.EXE"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_8AE7FBFC7E7644B6BCA7284D26CB6812"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C1232BFD62554FC0A759CB8421A119D8"
             {
             "SourcePath" = "8:..\\ExtensionCreatorGUI\\bin\\Release\\Templates\\j16_component\\beConfig.xml"
@@ -3150,6 +3183,37 @@
             "TargetName" = "8:jquery.js"
             "Tag" = "8:"
             "Folder" = "8:_D149D55120564D7BA826BEDCFA407F7C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CE4224D17AC244708009F2B60C37FF89"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:JoomlaLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=49f1939ce416a990, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_CE4224D17AC244708009F2B60C37FF89"
+                    {
+                    "Name" = "8:JoomlaLibrary.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\JoomlaLibrary\\bin\\Release\\JoomlaLibrary.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_8AE7FBFC7E7644B6BCA7284D26CB6812"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -3250,6 +3314,26 @@
             "TargetName" = "8:beTmplList_head_obsolete.php"
             "Tag" = "8:"
             "Folder" = "8:_128EBA9299D64B1A8C57B1FF0FDBBCAC"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D84E03D240194E7F9D7E9540CA66D566"
+            {
+            "SourcePath" = "8:..\\ExtensionCreatorGUI\\bin\\Release\\TemplateManifests\\joomla\\component_files.xml"
+            "TargetName" = "8:component_files.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_528DE15CBBEC4C14B5E882C3A58CAE76"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -3404,12 +3488,52 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E816E204988F40B4A5B7647D6A875EF5"
+            {
+            "SourcePath" = "8:..\\ExtensionCreatorGUI\\bin\\Release\\TemplateManifests\\joomla\\plugin_files.xml"
+            "TargetName" = "8:plugin_files.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_528DE15CBBEC4C14B5E882C3A58CAE76"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E87108CE995041D5B645AF312155EB15"
             {
             "SourcePath" = "8:..\\ExtensionCreatorGUI\\bin\\Release\\Templates\\j16_component\\feTmpl.php"
             "TargetName" = "8:feTmpl.php"
             "Tag" = "8:"
             "Folder" = "8:_128EBA9299D64B1A8C57B1FF0FDBBCAC"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E8EC80D3764A4CC6964796199983AA35"
+            {
+            "SourcePath" = "8:..\\licenses\\license_ionic.zip.txt"
+            "TargetName" = "8:license_ionic.zip.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_A4142877989A4170A0D22BAECFCD3687"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -3490,26 +3614,6 @@
             "TargetName" = "8:feModelList.php"
             "Tag" = "8:"
             "Folder" = "8:_D149D55120564D7BA826BEDCFA407F7C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F02E9636AC914C64BB3C4EE4DD728FF7"
-            {
-            "SourcePath" = "8:..\\ExtensionCreatorGUI\\bin\\Release\\Templates\\j16_component\\beListForm.xml"
-            "TargetName" = "8:beListForm.xml"
-            "Tag" = "8:"
-            "Folder" = "8:_128EBA9299D64B1A8C57B1FF0FDBBCAC"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -3684,37 +3788,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F7441A0A59F2A49C937A7B06B652229A"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Irony, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ca48ace7223ead47, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_F7441A0A59F2A49C937A7B06B652229A"
-                    {
-                    "Name" = "8:Irony.DLL"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Irony.DLL"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_8AE7FBFC7E7644B6BCA7284D26CB6812"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F7500C9052E2429EA5759C27FAAD4B1F"
             {
             "SourcePath" = "8:..\\ExtensionCreatorGUI\\bin\\Release\\Templates\\j16_component\\feFormController.php"
@@ -3829,6 +3902,37 @@
                     }
                 }
             "SourcePath" = "8:Mono.TextTemplating.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_8AE7FBFC7E7644B6BCA7284D26CB6812"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FE13D6C111F3A7C6E06E41805CD37A84"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Irony.Interpreter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ca48ace7223ead47, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_FE13D6C111F3A7C6E06E41805CD37A84"
+                    {
+                    "Name" = "8:Irony.Interpreter.DLL"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Irony.Interpreter.DLL"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_8AE7FBFC7E7644B6BCA7284D26CB6812"
@@ -4038,6 +4142,17 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_A4142877989A4170A0D22BAECFCD3687"
+                    {
+                    "Name" = "8:licenses"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_7A031571EF7F4083A020F8A0C9D89D79"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_F17A8BC8D18241C993FE6E18BB0139CE"
@@ -4068,7 +4183,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Extension Creator"
         "ProductCode" = "8:{1190B0DB-D107-4CD9-B468-F5294697335A}"
-        "PackageCode" = "8:{D55E5E07-54F7-4C2B-AB2E-70008EBF8A05}"
+        "PackageCode" = "8:{6CB3EDAA-46D6-4EB3-B3D7-9BD7DBA33CFA}"
         "UpgradeCode" = "8:{C514F31A-B9A3-4CF6-ADDB-FC8247393A4A}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

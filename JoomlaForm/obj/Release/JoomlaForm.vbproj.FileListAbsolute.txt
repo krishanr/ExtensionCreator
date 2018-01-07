@@ -1,0 +1,10 @@
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaForm\bin\Release\JoomlaForm.dll
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaForm\bin\Release\JoomlaForm.pdb
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaForm\bin\Release\JoomlaForm.xml
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaForm\obj\Release\JoomlaForm.vbprojResolveAssemblyReference.cache
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaForm\obj\Release\JoomlaForm.frmJForm.resources
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaForm\obj\Release\JoomlaForm.Resources.resources
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaForm\obj\Release\JoomlaForm.vbproj.GenerateResource.Cache
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaForm\obj\Release\JoomlaForm.dll
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaForm\obj\Release\JoomlaForm.xml
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaForm\obj\Release\JoomlaForm.pdb

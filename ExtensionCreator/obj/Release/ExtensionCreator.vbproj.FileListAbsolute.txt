@@ -3,10 +3,9 @@ C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\Extensio
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreator\bin\Release\ExtensionCreator.xml
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreator\bin\Release\Ionic.Zip.dll
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreator\bin\Release\Mono.TextTemplating.dll
-C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreator\bin\Release\Mono.TextTemplating.pdb
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreator\obj\Release\ExtensionCreator.vbprojResolveAssemblyReference.cache
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreator\obj\Release\ExtensionCreator.Resources.resources
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreator\obj\Release\ExtensionCreator.vbproj.GenerateResource.Cache
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreator\obj\Release\ExtensionCreator.dll
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreator\obj\Release\ExtensionCreator.xml
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreator\obj\Release\ExtensionCreator.pdb
-C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\ExtensionCreator\obj\Release\ExtensionCreator.vbprojResolveAssemblyReference.cache

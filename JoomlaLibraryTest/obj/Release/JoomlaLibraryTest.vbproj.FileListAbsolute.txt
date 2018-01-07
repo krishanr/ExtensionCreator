@@ -5,7 +5,7 @@ C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLi
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\JoomlaGUI.exe
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\ExtensionCreator.dll
-C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\JForm.exe
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\JoomlaForm.dll
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\Irony.Samples.dll
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\Irony.dll
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\Ionic.Zip.dll
@@ -17,13 +17,8 @@ C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLi
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\JoomlaGUI.xml
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\ExtensionCreator.pdb
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\ExtensionCreator.xml
-C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\JForm.pdb
-C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\JForm.xml
-C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\JForm.exe.config
-C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\Irony.Samples.pdb
-C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\Irony.pdb
-C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\Mono.TextTemplating.pdb
-C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\Irony.Interpreter.pdb
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\JoomlaForm.pdb
+C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\bin\Release\JoomlaForm.xml
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\obj\Release\JoomlaLibraryTest.vbprojResolveAssemblyReference.cache
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\obj\Release\JoomlaLibraryTest.Resources.resources
 C:\Users\Krishan\Documents\Visual Studio 2013\Projects\ExtensionCreator\JoomlaLibraryTest\obj\Release\JoomlaLibraryTest.vbproj.GenerateResource.Cache

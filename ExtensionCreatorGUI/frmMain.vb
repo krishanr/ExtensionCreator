@@ -28,8 +28,9 @@ Public Class frmMain
             'Program is being installed. Load initial settings. 
             Install()
             For Each ExtensionXmlFile As String In My.Settings.ExtensionXmlFiles
-                Dim AnExtensionItem As ExtensionItem = New ExtensionItem
-                AnExtensionItem.File = ExtensionXmlFile
+                Dim AnExtensionItem As ExtensionItem = New ExtensionItem With {
+                    .File = ExtensionXmlFile
+                }
                 ExtensionMgr.Extensions.Add(AnExtensionItem)
             Next
             'Lets exit after ExtensionMgr was initalized.

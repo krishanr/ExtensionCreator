@@ -53,7 +53,6 @@ Public Class ExtensionManager
 
     Public Sub Add(ByVal ExtensionXmlFile As String)
         'On start up the paths might be relative to the app directory, so make them absolute.
-        'TODO: Think this code is now obsolete
         If Not Path.IsPathRooted(ExtensionXmlFile) Then
             ExtensionXmlFile = My.Application.Info.DirectoryPath & "\" & ExtensionXmlFile
         End If

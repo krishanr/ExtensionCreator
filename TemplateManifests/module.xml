@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension title="Joomla Module">
+  <parameters>
+    <loadTemplate from="joomla/module.xml" select="module/parameters/*" />
+    <module>
+      <!-- If name is not specified, it is auto-generated using the nameType parameter. -->
+      <label>My Showcase</label>
+      <description>Displays an image and some text in a container.</description>
+      <!-- The application client for which the module will be installed for. 
+			 Use site or administrator. -->
+      <client>site</client>
+    </module>
+  </parameters>
+  <!-- Typical tasks for modules. -->
+  <tasks>
+    <!-- Order matters, the tasks are run in the order seen here. -->
+    <!-- Language files need to go first, so the other files can add to them. -->
+    <task name="Language">
+      <parameters />
+    </task>
+    <task name="Main">
+      <parameters />
+    </task>
+  </tasks>
+  <loadTemplate from="joomla/module.xml" select="module/taskDefinitions" />
+</extension>
