@@ -1,7 +1,7 @@
 Extension Creator
 ======
 
-![Extension Creator](https://github.com/k2rajara/ExtensionCreator/blob/OpenSource/ExtensionCreator.PNG "Extension Creator")
+![Extension Creator](https://github.com/krishanr/ExtensionCreator/blob/master/ExtensionCreator.PNG "Extension Creator")
 
 ExtensionCreator is a general purpose Windows application designed to help reduce redundancies in the development of software extensions. It wraps a template engine creating code files from code templates using parameters from an XML file. Strengths of the application include the following:
 * Parameters are stored in XML files which can be reused for different extensions using XPATH queries.
@@ -14,17 +14,17 @@ This application was originally designed to create boiler plate code for Joomla 
 * Existing code template files could be edited and new ones could be created based on custom requirements.
 
 ## Download
-* [Version 0.5](https://github.com/k2rajara/ExtensionCreator/releases/download/v0.5-alpha/ECInstaller.msi)
+* [Version 0.5](https://github.com/krishanr/ExtensionCreator/releases/download/v0.5-alpha/ECInstaller.msi)
 
 ## Usage
 After installing the application, the "Extension Creator" folder will be created in the "Documents" folder, and will contain the following files:
 
-![EC Files](https://github.com/k2rajara/ExtensionCreator/blob/OpenSource/EcFiles.PNG "Extension creator files")
+![EC Files](https://github.com/krishanr/ExtensionCreator/blob/master/EcFiles.PNG "Extension creator files")
 
 The program will work with the above files by default, and put the generated files in the _Output_ folder. After a Joomla extension is run, an installable ZIP file will be created in the _Archives_ folder.
 
 ## License 
-* see [LICENSE](https://github.com/k2rajara/ExtensionCreator/blob/OpenSource/license.txt) file
+* see [LICENSE](https://github.com/krishanr/ExtensionCreator/blob/master/license.txt) file
 
 ## Version 
 * Version 0.5
