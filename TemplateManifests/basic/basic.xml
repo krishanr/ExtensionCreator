@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension title="Basic Extension">
+  <parameters>
+    <config>
+      <templateClass>BasicExtension</templateClass>
+      <assemblyFile>ExtensionCreator.dll</assemblyFile>
+    </config>
+    <files>
+      <!-- Root directory for template files. -->
+      <TemplateFolder relUri="true">..\..\Templates\basic</TemplateFolder>
+      <templateFiles relUri="true">basic_files.xml</templateFiles>
+      <OutputFolder relUri="true">..\..\Output</OutputFolder>
+      <ArchiveDirectory relUri="true">..\..\Archives</ArchiveDirectory>
+      <exportFileName>export.zip</exportFileName>
+    </files>
+    <name>BasicExtension</name>
+  </parameters>
+  <tasks>
+    <!-- Order matters, the tasks are run in the order seen here. -->
+    <task name="Main">
+      <parameters>
+        <name>Basic</name>
+      </parameters>
+    </task>
+  </tasks>
+  <taskDefinitions>
+    <taskDefinition name="Main" />
+  </taskDefinitions>
+</extension>
