@@ -25,7 +25,7 @@ This application was originally designed to create boiler plate code for Joomla 
 * Windows 10 Home
 
 ## Usage
-After installing the application, the "Extension Creator" folder will be created in the "Documents" folder, and will contain the following files:
+After installing the application, the "Extension Creator" folder will be created in the "Documents" folder, and will contain the following files (except the _Output_ and _Archives_ folders which will be created later):
 
 ![EC Files](https://github.com/krishanr/ExtensionCreator/blob/master/EcFiles.PNG "Extension creator files")
 
