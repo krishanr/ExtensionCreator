@@ -16,6 +16,14 @@ This application was originally designed to create boiler plate code for Joomla 
 ## Download
 * [Version 0.5](https://github.com/krishanr/ExtensionCreator/releases/download/v0.5-alpha/ECInstaller.msi)
 
+### Requires
+* Windows 7 or later
+* .NET Framework 4.5 or later
+
+### Tested on
+* Windows 7 Professional
+* Windows 10 Home
+
 ## Usage
 After installing the application, the "Extension Creator" folder will be created in the "Documents" folder, and will contain the following files:
 
